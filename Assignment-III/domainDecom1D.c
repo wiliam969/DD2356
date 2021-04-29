@@ -10,7 +10,7 @@ int main(int argc, char *argv[]){
     
     // number of cells (global)
     int nxc = 128; // make sure nxc is divisible by size
-    double L = 3.1415; // Length of the domain
+    double L = 2*3.1415; // Length of the domain
     
 
     MPI_Init_thread(&argc, &argv, MPI_THREAD_SINGLE, &provided);
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]){
     // calculate first order derivative using central difference
     // here we need to correct value of the ghost cells!
     for (i=1; i<(nxn_loc-1); i++)
-      dfdx[i] = (f[i+1] - f[i-1])/2*dx;
+      dfdx[i] = (f[i+1] - f[i-1])/(2*dx);
 
     
     // Print f values
