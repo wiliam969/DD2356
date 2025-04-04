@@ -74,22 +74,22 @@ int main(int argc, char* argv[]){
   int i;
   double t1, t2;
 
-  printf("1. Initializing Matrices \n");
+  printf("1. Initializing Matrices OPT\n");
   // init matrices with random numbers
   initialize_matrices();
   // matrix-matrix multiply: this takes most of the time
-  printf("2. Matrix Multiply \n");
-  multiply_matrices();
+  printf("2. Matrix Multiply OPT \n");
+  opt_multiply_matrices();
   t1 = mysecond();
   for (i = 0; i < TRIALS; i++) {
     memset(matrix_r, '0', sizeof(double)*MSIZE*MSIZE);
-    multiply_matrices();
+    opt_multiply_matrices();
   }
   t2 = mysecond();
   // use the results for avoiding problem with smart compiler
   double sum = average_result();
-  printf("3. Sum = %8.6f \n", sum); 
-  printf("4. time = %f\n", (t2 - t1)/(double)TRIALS);
-  
+  printf("OPT: 3. Sum = %8.6f \n", sum); 
+  printf("OPT: 4. time = %f\n", (t2 - t1)/(double)TRIALS);
+
   return 0;
 }
