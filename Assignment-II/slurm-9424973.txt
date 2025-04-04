@@ -1,0 +1,55 @@
+
+ Performance counter stats for './transpose.out 64':
+
+       451,423,850      L1-dcache-load-misses:u          #   28.43% of all L1-dcache accesses  (85.50%)
+     1,587,962,382      L1-dcache-loads:u                                                    (85.50%)
+         2,117,166      L1-dcache-prefetches:u                                               (85.50%)
+            27,784      L1-icache-load-misses:u          #    0.98% of all L1-icache accesses  (85.58%)
+         2,836,227      L1-icache-loads:u                                                    (86.06%)
+       718,813,362 ns   duration_time:u                                                    
+     2,376,130,825      cpu-cycles:u                                                         (86.06%)
+     1,553,647,737      instructions:u                   #    0.65  insn per cycle           (85.81%)
+
+       0.718813362 seconds time elapsed
+
+       0.702086000 seconds user
+       0.016047000 seconds sys
+
+
+srun: Step created for StepId=9424973.1
+
+ Performance counter stats for './transpose.out 128':
+
+       451,171,428      L1-dcache-load-misses:u          #   27.88% of all L1-dcache accesses  (85.50%)
+     1,618,348,783      L1-dcache-loads:u                                                    (85.49%)
+         1,881,478      L1-dcache-prefetches:u                                               (85.50%)
+            25,738      L1-icache-load-misses:u          #    0.90% of all L1-icache accesses  (85.60%)
+         2,865,379      L1-icache-loads:u                                                    (86.05%)
+       718,411,509 ns   duration_time:u                                                    
+     2,372,006,802      cpu-cycles:u                                                         (86.05%)
+     1,551,206,694      instructions:u                   #    0.65  insn per cycle           (85.82%)
+
+       0.718411509 seconds time elapsed
+
+       0.713784000 seconds user
+       0.004010000 seconds sys
+
+
+
+ Performance counter stats for './transpose.out 2048':
+
+       451,718,825      L1-dcache-load-misses:u          #   27.90% of all L1-dcache accesses  (85.51%)
+     1,619,253,353      L1-dcache-loads:u                                                    (85.51%)
+         1,941,623      L1-dcache-prefetches:u                                               (85.51%)
+            27,056      L1-icache-load-misses:u          #    0.33% of all L1-icache accesses  (85.56%)
+         8,151,440      L1-icache-loads:u                                                    (86.07%)
+       719,372,778 ns   duration_time:u                                                    
+     2,374,180,399      cpu-cycles:u                                                         (86.07%)
+     1,549,042,302      instructions:u                   #    0.65  insn per cycle           (85.76%)
+
+       0.719372778 seconds time elapsed
+
+       0.714786000 seconds user
+       0.004015000 seconds sys
+
+
