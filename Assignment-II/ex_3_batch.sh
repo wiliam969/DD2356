@@ -11,10 +11,12 @@
 #SBATCH -p shared
 
 # 10 hours of wall clock time
-#SBATCH -t 00:10:00
+#SBATCH -t 00:15:00
 
 # Number of nodes
 #SBATCH --nodes=1
+
+#SBATCH --mem=20G
 
 # Number of MPI processes per node
 #SBATCH --ntasks-per-node=1
@@ -23,4 +25,4 @@
 # #SBATCH --cpus-per-task=1
 
 # Run the executable named main.x and write the output to my_output_file.txt
-srun ./spmv.out $SLURM_ARRAY_TASK_ID > my_output_file_$SLURM_ARRAY_TASK_ID.txt
+srun ./spmv.out 10000 > my_output_file_10000.txt

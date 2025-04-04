@@ -40,6 +40,8 @@ int main(int argc, char *argv[])
     x = (double*)malloc(nrows*sizeof(double));
     y = (double*)malloc(nrows*sizeof(double));
 
+    printf("Allocate enough storage for the matix nrows:%d, nnzMax:%d", nrows, nnzMax);
+    
     /* Create a pentadiagonal matrix, representing very roughly a finite
        difference approximation to the Laplacian on a square n x n mesh */
     row = 0;
