@@ -45,6 +45,19 @@ void multiply_matrices()
   }
 }
 
+void opt_multiply_matrices()
+{
+  int i, j, k ;
+  // Loop nest optimized algorithm
+  for (i = 0 ; i < MSIZE ; i++) {
+    for (k = 0 ; k < MSIZE ; k++) {
+      for (j = 0 ; j < MSIZE ; j++) {
+        matrix_r[i][j] += matrix_a[i][k] * matrix_b[k][j];
+      }
+    }
+  }
+}
+
 double average_result()
 {
   int i, j ;
@@ -77,6 +90,23 @@ int main(int argc, char* argv[]){
   double sum = average_result();
   printf("3. Sum = %8.6f \n", sum); 
   printf("4. time = %f\n", (t2 - t1)/(double)TRIALS);
+
+  printf("1. Initializing Matrices OPT\n");
+  // init matrices with random numbers
+  initialize_matrices();
+  // matrix-matrix multiply: this takes most of the time
+  printf("2. Matrix Multiply OPT \n");
+  opt_multiply_matrices();
+  t1 = mysecond();
+  for (i = 0; i < TRIALS; i++) {
+    memset(matrix_r, '0', sizeof(double)*MSIZE*MSIZE);
+    opt_multiply_matrices();
+  }
+  t2 = mysecond();
+  // use the results for avoiding problem with smart compiler
+  sum = average_result();
+  printf("OPT: 3. Sum = %8.6f \n", sum); 
+  printf("OPT: 4. time = %f\n", (t2 - t1)/(double)TRIALS);
 
   return 0;
 }
