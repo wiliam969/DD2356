@@ -1,0 +1,1 @@
+Allocate enough storage for the matix nrows:10000, nnzMax:50000Time for Sparse Ax, nrows=10000, nnz=49600, T = 0.000075
