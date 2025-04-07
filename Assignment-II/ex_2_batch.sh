@@ -5,7 +5,7 @@
 #SBATCH -A edu25.DD2356
 
 # The name of the job
-#SBATCH -J myjob
+#SBATCH -J ex2_rm
 
 # The partition/queue
 #SBATCH -p shared
@@ -25,4 +25,4 @@
 # #SBATCH --cpus-per-task=1
 
 # Run the executable named main.x and write the output to my_output_file.txt
-srun ./a.out > my_output_file
+srun ./r_m.x > mof.text
