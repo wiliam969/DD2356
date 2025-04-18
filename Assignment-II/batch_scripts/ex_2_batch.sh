@@ -22,7 +22,7 @@
 #SBATCH --ntasks-per-node=1
 
 # Optional: if your cluster uses cpus-per-task or similar, specify them if needed
-# #SBATCH --cpus-per-task=1
+##SBATCH --cpus-per-task=8
 
 # Run the executable named main.x and write the output to my_output_file.txt
 srun ./r_m.x > mof.text
