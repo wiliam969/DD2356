@@ -1,0 +1,5 @@
+DFTW calculation with N = 8000
+DFTW computation in 11.495783 seconds
+Xre[0] = 8000.000000
+[ perf record: Woken up 13 times to write data ]
+[ perf record: Captured and wrote 3.240 MB dftw.perf (46013 samples) ]
