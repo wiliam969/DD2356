@@ -19,7 +19,7 @@
 #SBATCH --ntasks=1 # just one task boyz 
 
 # we will have 16 openmp tasks i guess lets go 
-#SBATCH --cpus-per-task=128
+#SBATCH --cpus-per-task=32
 
 # Define the thread configurations to test
 threads=(2 4 8 16 32)
