@@ -1,0 +1,2 @@
+Execution time with scheduling: 0.076746 seconds
+Computation completed.
