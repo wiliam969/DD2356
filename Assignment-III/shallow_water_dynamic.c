@@ -40,7 +40,7 @@ void compute() {
 
     end_time = omp_get_wtime();
 
-    printf("Execution time with %s scheduling: %f seconds\n", end_time - start_time);
+    printf("Execution time with scheduling: %f seconds\n", end_time - start_time);
 }
 
 void write_output() {
