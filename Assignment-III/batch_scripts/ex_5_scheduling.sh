@@ -103,3 +103,44 @@ do
     # Use srun to launch the executable using the allocated cores
     srun ../shallow_water_dynamic.out > performance_data_dynamic_${num_threads}_32.txt
 done
+
+# guided 
+
+cc -O3 -march=native -fopenmp -DCHUNK_SIZE=8 ../shallow_water_guided.c -o ../shallow_water_guided.out
+
+# Loop over each thread configuration
+for num_threads in "${threads[@]}";
+do
+    echo "Running with ${num_threads} threads"
+
+    # Set the number of OpenMP threads
+    export OMP_NUM_THREADS=${num_threads}
+    # Use srun to launch the executable using the allocated cores
+    srun ../shallow_water_guided.out > performance_data_guided_${num_threads}_8.txt
+done
+
+cc -O3 -march=native -fopenmp -DCHUNK_SIZE=16 ../shallow_water_guided.c -o ../shallow_water_guided.out
+
+# Loop over each thread configuration
+for num_threads in "${threads[@]}";
+do
+    echo "Running with ${num_threads} threads"
+
+    # Set the number of OpenMP threads
+    export OMP_NUM_THREADS=${num_threads}
+    # Use srun to launch the executable using the allocated cores
+    srun ../shallow_water_guided.out > performance_data_guided_${num_threads}_16.txt
+done
+
+cc -O3 -march=native -fopenmp -DCHUNK_SIZE=32 ../shallow_water_guided.c -o ../shallow_water_guided.out
+
+# Loop over each thread configuration
+for num_threads in "${threads[@]}";
+do
+    echo "Running with ${num_threads} threads"
+
+    # Set the number of OpenMP threads
+    export OMP_NUM_THREADS=${num_threads}
+    # Use srun to launch the executable using the allocated cores
+    srun ../shallow_water_guided.out > performance_data_guided_${num_threads}_32.txt
+done
