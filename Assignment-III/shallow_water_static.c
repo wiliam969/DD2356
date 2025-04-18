@@ -7,6 +7,10 @@
 #define DT 0.01  // Time step
 #define DX 1.0   // Grid spacing
 
+#ifndef CHUNK_SIZE
+#define CHUNK_SIZE 16
+#endif
+
 double h[N][N], u[N][N], v[N][N];
 
 void initialize() {
@@ -18,12 +22,12 @@ void initialize() {
         }
 }
 
-void compute(const char *schedule_type) {
+void compute() {
     double start_time, end_time;
 
     start_time = omp_get_wtime();
 
-    #pragma omp parallel for collapse(2)
+    #pragma omp parallel for collapse(2) schedule(static,CHUNK_SIZE)
     for (int iter = 0; iter < ITER; iter++) {
         for (int i = 1; i < N - 1; i++) {
             for (int j = 1; j < N - 1; j++) {
@@ -36,7 +40,7 @@ void compute(const char *schedule_type) {
 
     end_time = omp_get_wtime();
 
-    printf("Execution time with %s scheduling: %f seconds\n", schedule_type, end_time - start_time);
+    printf("Execution time with %s scheduling: %f seconds\n", end_time - start_time);
 }
 
 void write_output() {
@@ -52,7 +56,6 @@ void write_output() {
 
 int main() {
     initialize();
-    setenv("OMP_SCHEDULE", "static", 1);
     compute();
     write_output();
     printf("Computation completed.\n");
