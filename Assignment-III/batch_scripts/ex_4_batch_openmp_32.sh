@@ -6,20 +6,11 @@
 
 # The name of the job
 #SBATCH -J dftw_homework
-
-# The partition/queue
 #SBATCH -p shared
-
-# 10 hours of wall clock time
-#SBATCH -t 00:15:00
-
-# Number of nodes
+#SBATCH -t 00:05:00
 #SBATCH --nodes=1
-
-#SBATCH --ntasks=1 # just one task boyz 
-
-# we will have 16 openmp tasks i guess lets go 
-#SBATCH --cpus-per-task=16
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=32
 
 #SBATCH --output=DFTW_%j.out
 
