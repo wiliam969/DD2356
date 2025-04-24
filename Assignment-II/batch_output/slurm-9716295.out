@@ -1,0 +1,54 @@
+
+ Performance counter stats for '../bin/transpose.out 64':
+
+            35,052      L1-dcache-load-misses:u          #    1.06% of all L1-dcache accesses  (59.25%)
+         3,313,093      L1-dcache-loads:u                                                  
+           109,932      L1-dcache-prefetches:u                                             
+             3,108      L1-icache-load-misses:u          #    1.89% of all L1-icache accesses
+           164,635      L1-icache-loads:u                                                  
+         5,949,370 ns   duration_time:u                                                    
+         5,341,809      cpu-cycles:u                                                       
+         4,867,373      instructions:u                   #    0.91  insn per cycle           (40.75%)
+
+       0.005949370 seconds time elapsed
+
+       0.004864000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for '../bin/transpose.out 128':
+
+         1,496,616      L1-dcache-load-misses:u          #   13.47% of all L1-dcache accesses  (31.17%)
+        11,114,650      L1-dcache-loads:u                                                    (82.16%)
+            23,962      L1-dcache-prefetches:u                                             
+             3,148      L1-icache-load-misses:u          #    1.51% of all L1-icache accesses
+           208,521      L1-icache-loads:u                                                  
+         8,230,827 ns   duration_time:u                                                    
+        11,716,516      cpu-cycles:u                                                       
+        12,125,878      instructions:u                   #    1.03  insn per cycle           (86.67%)
+
+       0.008230827 seconds time elapsed
+
+       0.003340000 seconds user
+       0.003340000 seconds sys
+
+
+
+ Performance counter stats for '../bin/transpose.out 2048':
+
+     4,325,545,078      L1-dcache-load-misses:u          #   20.34% of all L1-dcache accesses  (85.71%)
+    21,267,222,743      L1-dcache-loads:u                                                    (85.71%)
+         2,188,019      L1-dcache-prefetches:u                                               (85.71%)
+           648,100      L1-icache-load-misses:u          #    0.01% of all L1-icache accesses  (85.71%)
+     4,925,424,426      L1-icache-loads:u                                                    (85.71%)
+    36,063,105,165 ns   duration_time:u                                                    
+   121,660,116,046      cpu-cycles:u                                                         (85.72%)
+     1,289,014,550      instructions:u                   #    0.01  insn per cycle           (85.72%)
+
+      36.063105165 seconds time elapsed
+
+      36.057009000 seconds user
+       0.004000000 seconds sys
+
+

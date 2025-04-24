@@ -1,0 +1,72 @@
+
+ Performance counter stats for '../bin/matrix_multiply.out 64':
+
+           261,454      L1-dcache-load-misses:u          #    3.04% of all L1-dcache accesses  (54.53%)
+         8,595,574      L1-dcache-loads:u                                                  
+           585,521      L1-dcache-prefetches:u                                             
+             4,504      L1-icache-load-misses:u          #    2.62% of all L1-icache accesses
+           172,022      L1-icache-loads:u                                                  
+         8,297,537 ns   duration_time:u                                                    
+        13,379,768      cpu-cycles:u                                                       
+        18,882,103      instructions:u                   #    1.41  insn per cycle           (45.47%)
+
+       0.008297537 seconds time elapsed
+
+       0.003926000 seconds user
+       0.003926000 seconds sys
+
+
+
+ Performance counter stats for '../bin/matrix_multiply_opt.out 64':
+
+           223,786      L1-dcache-load-misses:u          #    5.98% of all L1-dcache accesses  (88.16%)
+         3,744,561      L1-dcache-loads:u                                                  
+           107,134      L1-dcache-prefetches:u                                             
+             4,256      L1-icache-load-misses:u          #    2.46% of all L1-icache accesses
+           172,981      L1-icache-loads:u                                                  
+         5,234,859 ns   duration_time:u                                                    
+         5,632,272      cpu-cycles:u                                                       
+            20,494      instructions:u                   #    0.00  insn per cycle           (11.84%)
+
+       0.005234859 seconds time elapsed
+
+       0.004859000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for '../bin/matrix_multiply.out 1000':
+
+    12,448,016,541      L1-dcache-load-misses:u          #   56.21% of all L1-dcache accesses  (85.71%)
+    22,146,365,979      L1-dcache-loads:u                                                    (85.70%)
+     1,354,408,219      L1-dcache-prefetches:u                                               (85.70%)
+           812,605      L1-icache-load-misses:u          #    1.32% of all L1-icache accesses  (85.72%)
+        61,582,667      L1-icache-loads:u                                                    (85.73%)
+    15,866,942,345 ns   duration_time:u                                                    
+    53,461,155,334      cpu-cycles:u                                                         (85.73%)
+    31,081,480,221      instructions:u                   #    0.58  insn per cycle           (85.71%)
+
+      15.866942345 seconds time elapsed
+
+      15.865848000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for '../bin/matrix_multiply_opt.out 1000':
+
+     1,417,399,432      L1-dcache-load-misses:u          #   16.53% of all L1-dcache accesses  (85.68%)
+     8,572,687,484      L1-dcache-loads:u                                                    (85.68%)
+       546,871,918      L1-dcache-prefetches:u                                               (85.68%)
+           602,168      L1-icache-load-misses:u          #    1.06% of all L1-icache accesses  (85.68%)
+        56,879,828      L1-icache-loads:u                                                    (85.68%)
+     1,454,627,473 ns   duration_time:u                                                    
+     4,882,008,024      cpu-cycles:u                                                         (85.74%)
+    10,724,429,617      instructions:u                   #    2.20  insn per cycle           (85.86%)
+
+       1.454627473 seconds time elapsed
+
+       1.442216000 seconds user
+       0.011985000 seconds sys
+
+
