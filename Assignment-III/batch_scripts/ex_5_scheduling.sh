@@ -22,7 +22,7 @@
 #SBATCH --cpus-per-task=32
 
 # Define the thread configurations to test
-threads=(2 4 8 16 32)
+threads=(1 2 4 8 16 32)
 
 cc -O3 -march=native -fopenmp -DCHUNK_SIZE=8 ../shallow_water_static.c -o ../shallow_water_static.out
 
