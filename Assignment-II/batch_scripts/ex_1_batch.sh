@@ -11,4 +11,4 @@
 #SBATCH --cpus-per-task=128
 
 # Run the executable named main.x and write the output to my_output_file.txt
-srun hwloc-ls --of png > topology.png
+srun hwloc-ls --output-format graphical topology.svg
