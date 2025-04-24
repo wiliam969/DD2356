@@ -3,7 +3,9 @@
 #include <string.h>
 #include <sys/time.h>
 
+#ifndef N
 #define N 2000
+#endif
 
 double a[N][N];
 double b[N][N];
