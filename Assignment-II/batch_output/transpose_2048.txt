@@ -1,2 +1,2 @@
-Transpose 2000 x 2000
-BaseTime = 6.43e-03 s, Base Rate = 4.97e+03 MB/s
+Transpose 2048 x 2048
+BaseTime = 3.59e-01 s, Base Rate = 9.35e+01 MB/s
