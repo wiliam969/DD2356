@@ -14,7 +14,7 @@
 
 #SBATCH --output=DFTW_%j.out
 
-cc -O3 -march=native -fopenmp DFTW_1_openmp.c -o DFTW_1_openmp.out
+cc -O3 -march=native -fopenmp ../DFTW_1_openmp.c -o ../bin/DFTW_1_openmp.out
 
 # Set the number of OpenMP threads
 export OMP_NUM_THREADS=32
@@ -25,5 +25,5 @@ num_runs=15
 for run in $(seq 1 $num_runs); do
     echo "Starting run $run..."
     # Use srun to launch the executable using the allocated cores
-    srun ./DFTW_1_openmp.out
+    srun ../bin/DFTW_1_openmp.out
 done

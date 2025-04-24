@@ -27,12 +27,12 @@
 cc -O3 -march=native -DN=64 ../src/transpose.c -o ../bin/transpose.out
 
 # Run the executable named main.x and write the output to my_output_file.txt
-srun perf stat -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-prefetches,L1-icache-load-misses,L1-icache-loads,duration_time,cpu-cycles,instructions ./transpose.out 64 > transpose_64.txt
+srun perf stat -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-prefetches,L1-icache-load-misses,L1-icache-loads,duration_time,cpu-cycles,instructions ../bin/transpose.out 64 > transpose_64.txt
 
 cc -O3 -march=native -DN=128 ../src/transpose.c -o ../bin/transpose.out
 
-srun perf stat -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-prefetches,L1-icache-load-misses,L1-icache-loads,duration_time,cpu-cycles,instructions ./transpose.out 128 > transpose_128.txt
+srun perf stat -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-prefetches,L1-icache-load-misses,L1-icache-loads,duration_time,cpu-cycles,instructions ../bin/transpose.out 128 > transpose_128.txt
 
 cc -O3 -march=native -DN=2048 ../src/transpose.c -o ../bin/transpose.out
 
-srun perf stat -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-prefetches,L1-icache-load-misses,L1-icache-loads,duration_time,cpu-cycles,instructions ./transpose.out 2048 > transpose_2048.txt
+srun perf stat -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-prefetches,L1-icache-load-misses,L1-icache-loads,duration_time,cpu-cycles,instructions ../bin/transpose.out 2048 > transpose_2048.txt
