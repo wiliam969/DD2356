@@ -1,0 +1,4 @@
+1. Initializing Matrices OPT
+2. Matrix Multiply OPT 
+OPT: 3. Sum = 249.968991 
+OPT: 4. time = 0.145151
