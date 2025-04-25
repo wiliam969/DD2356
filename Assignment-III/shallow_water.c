@@ -19,6 +19,8 @@ void initialize() {
 }
 
 void compute() {
+
+    #pragma omp parallel for collapse(2)
     for (int iter = 0; iter < ITER; iter++) {
         for (int i = 1; i < N - 1; i++) {
             for (int j = 1; j < N - 1; j++) {
