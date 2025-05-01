@@ -3,8 +3,8 @@
 #include <omp.h>
 
 #define N 500  // Grid size
-#define ITER 1000  // Number of iterations
-#define DT 0.01  // Time step
+#define ITER 10000  // Number of iterations
+#define DT 0.1  // Time step
 #define DX 1.0   // Grid spacing
 
 double h[N][N], u[N][N], v[N][N];
