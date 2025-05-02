@@ -6,6 +6,7 @@
 #SBATCH -p shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=128
 #SBATCH -e smp.stderr
 
 threads=(1 32 64 128)
@@ -25,5 +26,5 @@ for num_threads in "${threads[@]}"; do
         # Run and redirect output
         srun -n 1 ./streammp.x >> "$output_file"
     done
+    srun hwloc-ls --of svg > streammp_topo_${num_threads}.svg
 done
-srun hwloc-ls --of svg > streammp_topo.svg
