@@ -237,6 +237,7 @@ main()
   printf("*****  WARNING: ******\n");
 #endif
 
+
   printf("Array size = %llu (elements), Offset = %d (elements)\n" , (unsigned long long) STREAM_ARRAY_SIZE, OFFSET);
   printf("Memory per array = %.1f MiB (= %.1f GiB).\n", 
 	 BytesPerWord * ( (double) STREAM_ARRAY_SIZE / 1024.0/1024.0),
@@ -315,8 +316,9 @@ main()
 #ifdef TUNED
       tuned_STREAM_Copy();
 #else
+
       // HERE YOU CAN CAN CHANGE SCHEDULE 
-#pragma omp parallel for schedule(guided)
+#pragma omp parallel for schedule(dynamic)
       for (j=0; j<STREAM_ARRAY_SIZE; j++)
 	c[j] = a[j];
 #endif

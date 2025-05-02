@@ -21,7 +21,7 @@ export OMP_NUM_THREADS=128
 # Loop over each schedule type
 #for schedule in "${schedules[@]}"; do
     # Set the OpenMP schedule
-schedule="static" 
+schedule="guided" 
 export OMP_SCHEDULE="${schedule}"
 
 # Run 5 times for each schedule
