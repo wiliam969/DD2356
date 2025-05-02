@@ -31,7 +31,6 @@ int main(int argc, char argv[]){
 
   if(argc < 2){
     printf("!!\tERROR: Expected 1 argument, got %d\n", argc - 1);
-    MPI_Finalize();
     return 1;
   }
 
