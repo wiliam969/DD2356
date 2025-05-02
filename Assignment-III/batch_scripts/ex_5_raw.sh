@@ -21,7 +21,7 @@
 # we will have 16 openmp tasks i guess lets go 
 #SBATCH --cpus-per-task=1
 
-cc -O3 -march=native -fopenmp ../shallow_water.c -o ../shallow_water.out
+cc -O3 -march=native -fopenmp ../shallow_water_serial.c -o ../shallow_water_serial.out
 
 # Use srun to launch the executable using the allocated cores
-srun ../shallow_water.out > output.txt
+srun ../shallow_water_serial.out > output.txt
