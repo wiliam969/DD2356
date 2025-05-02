@@ -7,7 +7,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
-#SBATCH -e ex_3_serial.stderr
+#SBATCH -e ex_3_openmp.sdtderr
 
 gcc -O3 -fopenmp ../omp_sum.c -o ../omp_sum.out
 

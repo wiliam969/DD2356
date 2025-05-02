@@ -52,5 +52,5 @@ int main(int argc, char **argv) {
 
   generate_random(n_input, N); 
 
-  serial_sum(n_input, N); 
+  omp_critical_sum(n_input, N); 
 }
