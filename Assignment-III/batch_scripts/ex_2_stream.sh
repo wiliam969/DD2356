@@ -1,16 +1,16 @@
 #!/bin/bash -l
 
-#SBATCH -J A2-openmp
+#SBATCH -J A2-s_serial
 #SBATCH -t 0:00:30
 #SBATCH -A edu25.dd2356
 #SBATCH -p shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=128
 #SBATCH -e smp.stderr
 
 threads=(1 32 64 128)
 
+#SBATCH --cpus-per-task=${threads[@]}
 # Compile the program
 #ml PDC/23.12
 #ml cpeGNU/23.12

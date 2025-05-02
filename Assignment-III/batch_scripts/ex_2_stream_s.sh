@@ -1,32 +1,29 @@
 #!/bin/bash -l
 
-#SBATCH -J A3-SDG128
+#SBATCH -J A2-s_serial
 #SBATCH -t 0:00:30
 #SBATCH -A edu25.dd2356
 #SBATCH -p shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=128
 #SBATCH -e smp.stderr
 
-# Compile the program with OpenMP
-gcc -fopenmp stream.c -o streammp.x
+# Compile the program
+#ml PDC/23.12
+#ml cpeGNU/23.12
 
-# Set number of threads
-export OMP_NUM_THREADS=128
-
-# Define OpenMP scheduling types
-# Dont do this, change this in the parallel bits in the code 
-#schedules=("static" "dynamic" "guided")
-
-# Loop over each schedule type
-#for schedule in "${schedules[@]}"; do
-    # Set the OpenMP schedule
+gcc -O3 -fopenmp stream_guided.c -o streammp_g.x
 schedule="static" 
+num_threads = 128
 export OMP_SCHEDULE="${schedule}"
-
-# Run 5 times for each schedule
-for run in {1..5}; do
-    output_file="smp_output_128_${schedule}_run${run}.stdout"
-    srun -n 1 ./streammp.x >> "$output_file"
-done
+# Loop over each thread configuration
+    # Repeat  5 times
+    for run in {1..5}; do
+        export OMP_NUM_THREADS=${num_threads}
+        output_file="smp_output_${num_threads}_run${run}.stdout"
+        # Run and redirect output
+        srun -n 1 ./streammp.x >> "$output_file"
+    done
+srun hwloc-ls --of svg > streammp_topo_${num_threads}.svg
 
