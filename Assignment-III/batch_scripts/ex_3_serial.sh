@@ -10,5 +10,5 @@
 
 gcc -O3 -fopenmp ../serial_sum.c -o ../serial_sum.out
 
-srun -n 1 ../hwmp.out 1000
+srun -n 1 ../serial_sum.out 1000
 
