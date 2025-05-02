@@ -6,7 +6,7 @@
 #SBATCH -p shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=32
+#SBATCH --cpus-per-task=1
 #SBATCH -e ex_3_openmp_critical.sdtderr
 
 gcc -O3 -fopenmp ../omp_critical_sum.c -o ../omp_critical_sum.out
