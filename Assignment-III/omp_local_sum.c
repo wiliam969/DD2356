@@ -37,7 +37,7 @@ double omp_local_sum(double *x, size_t size)
 
     int thread_id = omp_get_thread_num();
     int num_threads = omp_get_num_threads();
-  
+    //divide array into chunk
     size_t chunk_size = size / num_threads;
     size_t start = thread_id * chunk_size;
     // incase division is uneven

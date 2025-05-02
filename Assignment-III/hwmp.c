@@ -6,7 +6,7 @@ int main(int argc, char argv[]){
 /*
 ml PDC/23.12
 ml cpeGNU/23.12
-gcc -fopenmp hwmp.c -o hwmp.x^C
+gcc -fopenmp hwmp.c -o hwmp.x
 export OMP_NUM_THREADS=4
 salloc -n 1 -t 0:10:00 -A edu25.DD2356 -p shared
 srun -n 1 ./hwmp.x

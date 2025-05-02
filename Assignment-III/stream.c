@@ -176,9 +176,9 @@
 #define STREAM_TYPE double
 #endif
 
-#ifndef _OPENMP
-#define _OPENMP true
-#endif
+//#ifndef _OPENMP
+//#define _OPENMP true
+//#endif
 
 
 static STREAM_TYPE	a[STREAM_ARRAY_SIZE+OFFSET],

@@ -4,7 +4,7 @@
 #include <sys/time.h>
 
 #ifndef N
-#define N 2048
+#define N 64
 #endif
 
 double a[N][N];

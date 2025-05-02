@@ -15,16 +15,18 @@ gcc -fopenmp stream.c -o streammp.x
 export OMP_NUM_THREADS=128
 
 # Define OpenMP scheduling types
-schedules=("static" "dynamic" "guided")
+# Dont do this, change this in the parallel bits in the code 
+#schedules=("static" "dynamic" "guided")
 
 # Loop over each schedule type
-for schedule in "${schedules[@]}"; do
+#for schedule in "${schedules[@]}"; do
     # Set the OpenMP schedule
-    export OMP_SCHEDULE="${schedule}"
+schedule="static" 
+export OMP_SCHEDULE="${schedule}"
 
-    # Run 5 times for each schedule
-    for run in {1..5}; do
-        output_file="smp_output_${schedule}_run${run}.stdout"
-        srun -n 1 ./streammp.x >> "$output_file"
-    done
+# Run 5 times for each schedule
+for run in {1..5}; do
+    output_file="smp_output_${schedule}_run${run}.stdout"
+    srun -n 1 ./streammp.x >> "$output_file"
 done
+

@@ -11,18 +11,19 @@
 threads=(1 32 64 128)
 
 # Compile the program
+#ml PDC/23.12
+#ml cpeGNU/23.12
 gcc -fopenmp stream.c -o streammp.x
-
 # Loop over each thread configuration
 for num_threads in "${threads[@]}"; do
-    # Repeat each configuration 5 times
+    # Repeat  5 times
     for run in {1..5}; do
         export OMP_NUM_THREADS=${num_threads}
 
-        # Unique output file for each run
         output_file="smp_output_${num_threads}_run${run}.stdout"
 
         # Run and redirect output
         srun -n 1 ./streammp.x >> "$output_file"
     done
 done
+srun hwloc-ls --of svg > streammp_topo.svg
