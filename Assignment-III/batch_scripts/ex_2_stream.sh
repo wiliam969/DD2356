@@ -14,7 +14,7 @@ threads=(1 32 64 128)
 # Compile the program
 #ml PDC/23.12
 #ml cpeGNU/23.12
-gcc -fopenmp stream.c -o streammp.x
+gcc -O3 -fopenmp stream.c -o streammp.x
 # Loop over each thread configuration
 for num_threads in "${threads[@]}"; do
     # Repeat  5 times
