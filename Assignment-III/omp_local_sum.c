@@ -28,7 +28,9 @@ Suspect they want to point out that addition is not atomic with this?
 
 double omp_local_sum(double *x, size_t size)
 {
+  double start_time, end_time;
 
+  start_time = omp_get_wtime();
   
   double local_sum_val[MAX_THREADS] = {0.0};
   double total_sum_val = 0.0;
@@ -55,6 +57,12 @@ double omp_local_sum(double *x, size_t size)
       total_sum_val += local_sum_val[i];
       
     }
+
+  end_time = omp_get_wtime();
+
+  printf("Execution time with scheduling: %f seconds\n", end_time - start_time);
+    
+  
 
   return total_sum_val;
 }
