@@ -27,7 +27,7 @@ double serial_sum(double *x, size_t size)
   return sum_val;
 }
 
-int main(int argc, char argv[]){
+int main(int argc, char **argv) {
 
   if(argc < 2){
     printf("!!\tERROR: Expected 1 argument, got %d\n", argc - 1);
