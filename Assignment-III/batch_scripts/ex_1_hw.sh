@@ -6,8 +6,10 @@
 #SBATCH -p shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=4
 
-salloc -n 1 -t 0:10:00 -A edu25.DD2356 -p shared
-srun -n 1 ./hwmp.x 
+gcc -O3 -fopenmp ../hwmp.c -o ../hwmp.x
+
+srun -n 1 ../hwmp.x 
 srun hwloc-ls --of svg > hwmp_topo.svg
 
