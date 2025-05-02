@@ -17,5 +17,5 @@ for run in {1..5}; do
     export OMP_NUM_THREADS=${num_threads}
 
     # Run and redirect output
-    srun -n 1 ../serial_sum.out 1000 >> "ex_3_serial_output.stdout"
+    srun -n 1 ../serial_sum.out 10000000 >> "ex_3_serial_output.stdout"
 done
