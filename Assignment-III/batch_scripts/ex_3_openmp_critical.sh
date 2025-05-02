@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=32
 #SBATCH -e ex_3_openmp.sdtderr
 
-gcc -O3 -fopenmp ../omp_sum.c -o ../omp_sum.out
+gcc -O3 -fopenmp ../omp_critical_sum.c -o ../omp_critical_sum.out
 threads=(1 2 4 8 16 20 24 28 32)
 
 for num_threads in "${threads[@]}"; do
@@ -18,6 +18,6 @@ for num_threads in "${threads[@]}"; do
         export OMP_NUM_THREADS=${num_threads}
 
         # Run and redirect output
-        srun -n 1 ../omp_sum.out 10000000 >> "ex_3_openmp_${num_threads}_output.stdout"
+        srun -n 1 ../omp_critical_sum.out 10000000 >> "ex_3_openmp_critical_${num_threads}_output.stdout"
     done
 done
