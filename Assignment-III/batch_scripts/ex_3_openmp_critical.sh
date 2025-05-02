@@ -6,11 +6,11 @@
 #SBATCH -p shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=32
 #SBATCH -e ex_3_openmp_critical.sdtderr
 
 gcc -O3 -fopenmp ../omp_critical_sum.c -o ../omp_critical_sum.out
-threads=(1)
+threads=(1 2 4 8 16 20 24 28 32)
 
 for num_threads in "${threads[@]}"; do
     # Repeat  5 times
