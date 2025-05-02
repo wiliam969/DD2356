@@ -34,7 +34,9 @@ double omp_critical_sum(double *x, size_t size)
     for (size_t i = 0; i < size; i++)
     {
       #pragma omp critical
+      {
         sum_val += x[i];
+      }
     }
 
   end_time = omp_get_wtime();
