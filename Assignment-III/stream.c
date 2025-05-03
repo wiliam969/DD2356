@@ -318,7 +318,7 @@ main()
 #else
 
       // HERE YOU CAN CAN CHANGE SCHEDULE 
-#pragma omp parallel for schedule(dynamic)
+#pragma omp parallel for schedule(static)
       for (j=0; j<STREAM_ARRAY_SIZE; j++)
 	c[j] = a[j];
 #endif

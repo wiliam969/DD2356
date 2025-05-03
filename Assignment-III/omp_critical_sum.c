@@ -33,6 +33,8 @@ double omp_critical_sum(double *x, size_t size)
   #pragma omp parallel for 
     for (size_t i = 0; i < size; i++)
     {
+      printf("inside for loop");
+
       #pragma omp critical
       {
         sum_val += x[i];
