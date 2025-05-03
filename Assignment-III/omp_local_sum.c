@@ -13,6 +13,24 @@ void generate_random(double *input, size_t size)
   }
 }
 
+double serial_sum(double *x, size_t size)
+{
+  double start_time, end_time;
+
+  start_time = omp_get_wtime();
+  double sum_val = 0.0;
+
+  for (size_t i = 0; i < size; i++) {
+    sum_val += x[i];
+  }
+
+  end_time = omp_get_wtime();
+
+  printf("Execution time with scheduling: %f seconds\n", end_time - start_time);
+  printf("serial_sum-version: %f", sum_val); 
+  return sum_val;
+}
+
 
 /*
 2.Implement a parallel version of the serial_sum called omp_sum 
@@ -52,7 +70,7 @@ double omp_local_sum(double *x, size_t size)
 
   printf("Execution time with scheduling: %f seconds\n", end_time - start_time);
     
-  
+  printf("omp_local_sum-version: %f", total_sum_val); 
 
   return total_sum_val;
 }
@@ -70,5 +88,6 @@ int main(int argc, char **argv) {
 
   generate_random(n_input, N); 
 
+  serial_sum(n_input, N); 
   omp_local_sum(n_input, N); 
 }
