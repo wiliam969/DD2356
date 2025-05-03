@@ -10,7 +10,6 @@
 
 threads=(1 32 64 128)
 
-#SBATCH --cpus-per-task=${threads[@]}
 # Compile the program
 #ml PDC/23.12
 #ml cpeGNU/23.12
