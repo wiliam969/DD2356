@@ -14,13 +14,6 @@ gcc -fopenmp stream.c -o streammp.x
 # Set number of threads
 export OMP_NUM_THREADS=128
 
-# Define OpenMP scheduling types
-# Dont do this, change this in the parallel bits in the code 
-#schedules=("static" "dynamic" "guided")
-
-# Loop over each schedule type
-#for schedule in "${schedules[@]}"; do
-    # Set the OpenMP schedule
 schedule="guided" 
 export OMP_SCHEDULE="${schedule}"
 
