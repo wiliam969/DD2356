@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <mpi.h>
 
 #define N 1000 // Matrix size
 
@@ -14,9 +15,15 @@ void initialize_matrix(double matrix[N][N]) {
 void compute_row_sums(double matrix[N][N], double row_sums[N]) {
     for (int i = 0; i < N; i++) {
         row_sums[i] = 0.0;
+
+        double temp_sum[N]; 
+
+        MPI_SCATTER( matrix[i], N, MPI_DOUBLE, temp_sum[i], i, MPI_DOUBLE, 0, MPI_COMM_WORLD);
         for (int j = 0; j < N; j++) {
-            row_sums[i] += matrix[i][j];
+            temp_sum[i] += matrix[i][j];
         }
+
+        MPI_Gather(temp_sum, N , MPI_DOUBLE , row_sums , N , MPI_DOUBLE , 0 , MPI_COMM_WORLD );
     }
 }
 
