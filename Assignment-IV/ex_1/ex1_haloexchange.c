@@ -20,6 +20,10 @@ void initialize() {
 
 void compute_step() {
     double u_next[N];
+
+    u_next[0]    = 0.0;
+    u_next[N-1]  = 0.0;    
+
     for (int i = 1; i < N - 1; i++) {
         u_next[i] = 2.0 * u[i] - u_prev[i] + C * C * DT * DT / (DX * DX) * (u[i+1] - 2.0 * u[i] + u[i-1]);
     }

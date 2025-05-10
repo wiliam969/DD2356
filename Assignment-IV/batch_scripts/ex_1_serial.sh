@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH -J A4-ex1-mpi
+#SBATCH -J A4-ex1-serial
 #SBATCH -t 0:15:00
 #SBATCH -A edu25.dd2356
 #SBATCH -p shared
