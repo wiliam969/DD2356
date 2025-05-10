@@ -12,4 +12,4 @@
 gcc -O3 -fopenmp ../ex_2/ex2_serial_sum.c -o ../bin/ex2_serial_sum.out
 
 # Run and redirect output
-srun -n 1 ../bin/ex2_serial_sum.out > "../batch_output/ex_2_serial_output.stdout"
+srun -n 1 ../bin/ex2_serial_sum.out > ../batch_output/ex_2_serial_output.stdout
