@@ -7,9 +7,9 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=2
 #SBATCH --cpus-per-task=1
-#SBATCH -e ex2_serial_sum.stderr
+#SBATCH -e ex1_mpi.stderr
 
-gcc -O3 -fopenmp ../ex_1/ex_1_mpi.c -o ../bin/ex_1_mpi.out
+cc -lm -O3 -march=native ../ex_1/ex_1_mpi.c -o ../bin/ex_1_mpi.out
 
 # Run and redirect output
 srun -n 2 ../bin/ex_1_mpi.out > "../batch_output/ex1_mpi.stdout"

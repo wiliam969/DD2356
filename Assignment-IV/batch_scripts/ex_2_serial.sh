@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex2_serial_sum.stderr
 
-gcc -O3 -fopenmp ../ex_2/ex2_serial_sum.c -o ../bin/ex2_serial_sum.out
+gcc -O3 -fopenmp ../ex2/ex2_serial_sum.c -o ../bin/ex2_serial_sum.out
 
 # Run and redirect output
 srun -n 1 ../bin/ex2_serial_sum.out > ../batch_output/ex_2_serial_output.stdout
