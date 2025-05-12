@@ -12,4 +12,4 @@
 cc -lm -O3 -march=native ../ex2/ex2_parallel_sum.c -o ../bin/ex2_parallel_sum.out
 
 # Run and redirect output
-srun -N 2 ../bin/ex2_parallel_sum.out > "../batch_output/ex2_parallel_sum_output.stdout"
+srun perf record -e -N 2 ../bin/ex2_parallel_sum.out > "../batch_output/ex2_parallel_sum_output.stdout"
