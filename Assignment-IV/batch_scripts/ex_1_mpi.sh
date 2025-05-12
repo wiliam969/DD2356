@@ -9,6 +9,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex1_mpi.stderr
 
+
+
+
 cc -lm -O3 -march=native ../ex_1/ex_1_mpi.c -o ../bin/ex_1_mpi.out
 
 # Run and redirect output
