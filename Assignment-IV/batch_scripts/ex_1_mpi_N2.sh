@@ -7,7 +7,7 @@
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=1
-#SBATCH -e ex_1_mr.stderr
+#SBATCH -e ex_1_N2.stderr
 
 process_count=(1 2 4 8)
 
