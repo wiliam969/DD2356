@@ -4,7 +4,7 @@
 #SBATCH -t 0:30:00
 #SBATCH -A edu25.dd2356
 #SBATCH -p shared
-#SBATCH --nodes=2
+#SBATCH --nodes=4
 #SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex_1_N4.stderr
