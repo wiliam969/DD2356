@@ -9,7 +9,5 @@
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex1_serial.stderr
 
-cc -lm -O3 -march=native ../ex_1/ex1_haloexchange.c -o ../bin/ex1_haloexchange.out
-
-# Run and redirect output
-srun -n 1 ../bin/ex1_haloexchange.out > "../batch_output/ex1_serial.stdout"
+ cc -lm -O3 -march=native -DN=10000 -DSTEPS=500 -DIO_ON_OFF=0 ../ex_1/ex_1_serial.c -o ../bin/ex_1_serial.out
+    srun -n 1 ../bin/ex_1_mpi_mr.out > "../batch_output/ex1_serial.stdout"    
