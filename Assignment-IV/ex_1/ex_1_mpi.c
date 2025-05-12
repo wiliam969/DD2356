@@ -3,12 +3,21 @@
 #include <math.h>
 #include <mpi.h>
 
+#ifndef N
 #define N 1000 // Grid size
+#endif
+
+#ifndef STEPS
 #define STEPS 100 // Time steps
+#endif
+
 #define C 1.0   // Wave speed
 #define DT 0.01 // Time step
 #define DX 1.0  // Grid spacing
 
+#ifndef IO_ON_OFF
+#define IO_ON_OFF 1 // IO flag
+#endif
 
 void initialize(double *u, double *u_prev, int local_n, int global_index_of_local_n) {
     for (int i = 1; i <= local_n; i++) {
@@ -44,6 +53,8 @@ void compute_step(double *u, double *u_prev, double *u_next, int local_n) {
 }
 
 void write_output(double *u, int local_n, int step, int rank) {
+    if (IO_ON_OFF == 0) return; // IO is off
+
     char fname[64];
     sprintf(fname, "wave_output_step%03d_rank%02d.txt", step, rank);
     FILE *f = fopen(fname, "w");
@@ -96,7 +107,7 @@ int main(int argc, char **argv) {
         }
     }
 
-    if (rank == 0) {
+    if (rank == 0 && IO_ON_OFF == 0) {
         printf("Simulation complete across %d ranks.\n", nprocs);
     }
 

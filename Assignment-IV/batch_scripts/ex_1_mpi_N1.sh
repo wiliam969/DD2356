@@ -12,6 +12,6 @@
 process_count=(1 2 4 8)
 
 for proc in "${process_count[@]}"; do
-    cc -lm -O3 -march=native -DN=10000 -DSTEPS=500 ../ex_1/ex_1_mpi.c -o ../bin/ex_1_mpi_mr.out
+    cc -lm -O3 -march=native -DN=10000 -DSTEPS=500 -DIO_ON_OFF=0 ../ex_1/ex_1_mpi.c -o ../bin/ex_1_mpi_mr.out
     srun -n ${proc} ../bin/ex_1_mpi_mr.out > "../batch_output/ex1_mpi_mr.stdout"    
 done
