@@ -12,6 +12,6 @@
 process_count=(1 2 4 8)
 
 for proc in "${process_count[@]}"; do
-    cc -lm -O3 -march=native -DN=10000 -DSTEPS=500 -DIO_ON_OFF=0 ../ex_1/ex_1_mpi_N1.c -o ../bin/ex_1_mpi_N1.out
+    cc -lm -O3 -march=native -DN=10000 -DSTEPS=500 -DIO_ON_OFF=0 ../ex_1/ex_1_mpi.c -o ../bin/ex_1_mpi_N1.out
     srun perf stat --to-json -e L1-dcache-load-misses,power/energy-cores/,L1-dcache-loads,L1-dcache-prefetches,L1-icache-load-misses,L1-icache-loads,duration_time,cpu-cycles,instructions ../bin/ex_1_mpi_N1_${proc}.out > ex_1_mpi_N1_${proc}.txt -n ${proc} ../bin/ex_1_mpi_N1_${proc}.out > ../batch_output/ex1_mpi_N1_${proc}.stdout    
 done
