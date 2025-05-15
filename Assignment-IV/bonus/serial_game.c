@@ -3,7 +3,7 @@
 #include <mpi.h>
 
 #define N 20  // Grid size
-#define STEPS 100  // Simulation steps
+#define STEPS 300  // Simulation steps
 
 int grid[N][N], new_grid[N][N];
 
