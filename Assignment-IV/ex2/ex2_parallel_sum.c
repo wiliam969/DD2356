@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <mpi.h>
 
+#ifndef N
 #define N 1000  // Matrix dimension
+#endif
 
 /* Initialize the full N×N matrix on root */
 void initialize_matrix(double *matrix) {
