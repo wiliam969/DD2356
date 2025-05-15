@@ -16,6 +16,6 @@ matrix_sizes=(1000 10000 100000 1000000)
 for proc in "${process_count[@]}"; do
     for size in "${matrix_sizes[@]}"; do
         cc -lm -O3 -march=native -DN=${size} ../ex4/blas_mpi.c -o ../bin/blas_mpi.out
-        srun -n ${proc} perf stat -e ${events} -o mpi_game-stat.stat ../bin/blas_mpi.out > ../batch_output/ex4_mpi_${proc}_${size}_output.stdout
+        srun -n ${proc} perf stat -e ${events} -o ex4_mpi_stat_${proc}_${size}.stat ../bin/blas_mpi.out > ../batch_output/ex4_mpi_${proc}_${size}_output.stdout
     done
 done
