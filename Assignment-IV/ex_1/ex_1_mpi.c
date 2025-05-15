@@ -47,8 +47,7 @@ void exchange_halos(double *u, int local_n, int left, int right, MPI_Comm comm) 
 void compute_step(double *u, double *u_prev, double *u_next, int local_n) {
     double coeff = C * C * DT * DT / (DX * DX);
     for (int i = 1; i <= local_n; i++) {
-        u_next[i] = 2.0*u[i] - u_prev[i]
-                    + coeff*(u[i+1] - 2.0*u[i] + u[i-1]);
+        u_next[i] = 2.0*u[i] - u_prev[i]+ coeff*(u[i+1] - 2.0*u[i] + u[i-1]);
     }
 }
 
