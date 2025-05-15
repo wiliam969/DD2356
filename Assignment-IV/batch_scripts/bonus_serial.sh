@@ -12,4 +12,4 @@
 . ./perf_env
 
 cc -lm -O3 -march=native ../bonus/serial_game.c -o ../bin/serial_game.out
-srun -n 1 perf stat -e ${events} -o mpi_game-stat.stat ../bin/serial_game.out smallspacefiller.rle > ../batch_output/serial_game.stdout    
+srun -n 1 perf stat -e ${events} -o mpi_game-stat.stat ../bin/serial_game.out > ../batch_output/serial_game.stdout    

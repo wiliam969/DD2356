@@ -12,4 +12,4 @@
 . ./perf_env
 
 cc -lm -O3 -march=native ../bonus/mpi_game.c -o ../bin/mpi_game.out
-srun -n 8 perf stat -e ${events} -o mpi_game-stat.stat ../bin/mpi_game.out smallspacefiller.rle > ../batch_output/mpi_game.stdout    
+srun -n 8 perf stat -e ${events} -o mpi_game-stat.stat ../bin/mpi_game.out > ../batch_output/mpi_game.stdout    
