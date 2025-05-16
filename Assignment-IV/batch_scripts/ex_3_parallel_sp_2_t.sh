@@ -9,9 +9,12 @@
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex3_mpi2t.stderr
 
+
+module load PDC/23.12
+module load score-p/8.4-cpeGNU
 export SCOREP_ENABLE_PROFILING=false
 export SCOREP_ENABLE_TRACING=true
-scorep cc -lm -O3 -march=native ../ex3/ex_2_parallel_sum.c -o ../bin/ex3_sp_ex2.out
+scorep cc -lm -O3 -march=native ../ex2/ex_2_parallel_sum.c -o ../bin/ex3_sp_ex2.out
 
 # Run and redirect output
 srun perf record -e ../bin/ex3_sp_ex2.out > "../batch_output/ex3_sp_ex2.stdout"

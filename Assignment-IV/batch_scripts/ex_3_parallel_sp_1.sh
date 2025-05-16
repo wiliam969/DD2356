@@ -9,8 +9,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex3_mpi_ex1.stderr
 
-export SCOREP_ENABLE_PROFILING=true
-scorep cc -lm -O3 -march=native ../ex3/ex_1_mpi.c -o ../bin/ex3_sp_ex1.out
+module load PDC/23.12
+module load score-p/8.4-cpeGNU
+scorep cc -lm -O3 -march=native ../ex1/ex_1_mpi.c -o ../bin/ex3_sp_ex1.out
 
 # Run and redirect output
 srun -n 8 ../bin/ex3_sp_ex1.out > "../batch_output/ex3_sp_ex1.stdout"
