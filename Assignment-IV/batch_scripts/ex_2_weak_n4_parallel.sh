@@ -9,6 +9,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex2_N2_ws4.stderr
 #SBATCH --mem=4G
+
 process_count=(1 2 4 8)
 matrix_sizes=(1000 10000 100000 1000000)
 
