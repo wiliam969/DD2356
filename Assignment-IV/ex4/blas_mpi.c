@@ -66,10 +66,10 @@ int main(int argc, char **argv) {
         0.0, local_result, 1);
     
     MPI_Gather(
-        local_result,                /* sendbuf   */
+        local_result,              /* sendbuf   */
         rows_per_proc,             /* sendcount */
         MPI_DOUBLE,                /* sendtype  */
-        result,                  /* recvbuf   */
+        result,                    /* recvbuf   */
         rows_per_proc,             /* recvcount */
         MPI_DOUBLE,                /* recvtype  */
         0,                         /* root      */
