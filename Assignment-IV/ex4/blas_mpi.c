@@ -8,7 +8,7 @@
 #endif
 
 void initialize(double *matrix, double *vector) {
-    for (int i = 0; i < MATRIX_SIZE * N; i++) {
+    for (int i = 0; i < MATRIX_SIZE * MATRIX_SIZE; i++) {
         matrix[i] = (double)(i % 100) / 10.0;
     }
     for (int i = 0; i < MATRIX_SIZE; i++) {

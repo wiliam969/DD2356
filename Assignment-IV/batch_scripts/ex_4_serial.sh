@@ -12,9 +12,7 @@ matrix_sizes=(1000 10000 100000 1000000)
 . ./perf_env
 
 # Run and redirect output
-for proc in "${process_count[@]}"; do
-    for size in "${matrix_sizes[@]}"; do
-        cc -lm -O3 -march=native -DMATRIX_SIZE=${size} ../ex4/blas_serial.c -o ../bin/blas_serial.out
-        srun -n ${proc} perf stat -e ${events} -o ex4_stat_serial_${proc}_${size}.stat ../bin/blas_serial.out > ../batch_output/ex4_serial_${proc}_${size}_output.stdout
-    done
+for size in "${matrix_sizes[@]}"; do
+    cc -lm -O3 -march=native -DMATRIX_SIZE=${size} ../ex4/blas_serial.c -o ../bin/blas_serial.out
+    srun -n ${proc} perf stat -e ${events} -o ex4_stat_serial_${proc}_${size}.stat ../bin/blas_serial.out > ../batch_output/ex4_serial_${proc}_${size}_output.stdout
 done
