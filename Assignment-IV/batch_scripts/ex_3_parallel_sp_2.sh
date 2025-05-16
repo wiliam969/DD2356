@@ -13,4 +13,4 @@ export SCOREP_ENABLE_PROFILING=true
 scorep cc -lm -O3 -march=native ../ex3/ex_2_parallel_sum.c -o ../bin/ex3_sp_ex2.out
 
 # Run and redirect output
-srun perf record -e  ../bin/ex3_sp_ex2.out > "../batch_output/ex3_sp_ex2.stdout"
+srun perf record -e ../bin/ex3_sp_ex2.out > "../batch_output/ex3_sp_ex2.stdout"
