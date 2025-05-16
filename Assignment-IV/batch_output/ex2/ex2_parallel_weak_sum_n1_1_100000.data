@@ -1,0 +1,36 @@
+# started on Fri May 16 03:23:51 2025
+
+
+ Performance counter stats for '../bin/ex2_parallel_sum.out':
+
+         1,229,283      all_dc_accesses:u                                                    (7.57%)
+                 0      all_tlbs_flushed:u                                                   (35.62%)
+           200,532      l1_dtlb_misses:u                                                     (63.67%)
+           623,759      l2_cache_accesses_from_dc_misses:u                                     (85.89%)
+           108,180      l2_cache_accesses_from_ic_misses:u                                   
+           404,868      l2_cache_hits_from_dc_misses:u                                     
+            76,054      l2_cache_hits_from_ic_misses:u                                       (92.43%)
+           149,726      l2_cache_hits_from_l2_hwpf:u                                         (64.38%)
+            96,589      l2_cache_misses_from_dc_misses:u                                     (36.33%)
+                 0      l2_cache_misses_from_ic_miss:u                                       (14.11%)
+     <not counted>      l2_dtlb_misses:u                                              (0.00%)
+     <not counted>      l2_itlb_misses:u                                              (0.00%)
+     <not counted>      sse_avx_stalls:u                                              (0.00%)
+     <not counted>      uops_dispatched:u                                             (0.00%)
+     <not counted>      uops_retired:u                                                (0.00%)
+   <not supported>      l3_accesses:u                                               
+   <not supported>      l3_misses:u                                                 
+        16,161,640 ns   duration_time:u                                                    
+     <not counted>      cpu-cycles:u                                                  (0.00%)
+     <not counted>      instructions:u                                                (0.00%)
+
+       0.016161640 seconds time elapsed
+
+       0.007485000 seconds user
+       0.007485000 seconds sys
+
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog

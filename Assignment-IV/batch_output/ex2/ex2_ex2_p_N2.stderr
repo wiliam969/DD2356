@@ -1,0 +1,172 @@
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+srun: warning: can't run 1 processes on 2 nodes, setting nnodes to 1
+Workload failed: No such file or directory
+srun: error: nid001013: task 0: Exited with exit code 255
+srun: Terminating StepId=10132116.0
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+srun: warning: can't run 1 processes on 2 nodes, setting nnodes to 1
+Workload failed: No such file or directory
+srun: error: nid001013: task 0: Exited with exit code 255
+srun: Terminating StepId=10132116.1
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+srun: warning: can't run 1 processes on 2 nodes, setting nnodes to 1
+Workload failed: No such file or directory
+srun: error: nid001013: task 0: Exited with exit code 255
+srun: Terminating StepId=10132116.2
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+srun: warning: can't run 1 processes on 2 nodes, setting nnodes to 1
+Workload failed: No such file or directory
+srun: error: nid001013: task 0: Exited with exit code 255
+srun: Terminating StepId=10132116.3
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+srun: error: nid001013: task 0: Exited with exit code 255
+srun: Terminating StepId=10132116.4
+srun: error: nid001014: task 1: Terminated
+srun: Force Terminated StepId=10132116.4
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+srun: error: nid001013: task 0: Exited with exit code 255
+srun: Terminating StepId=10132116.5
+srun: error: nid001014: task 1: Terminated
+srun: Force Terminated StepId=10132116.5
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+srun: error: nid001013: task 0: Exited with exit code 255
+srun: Terminating StepId=10132116.6
+srun: error: nid001014: task 1: Terminated
+srun: Force Terminated StepId=10132116.6
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+srun: error: nid001013: task 0: Exited with exit code 255
+srun: Terminating StepId=10132116.7
+srun: error: nid001014: task 1: Exited with exit code 255
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+srun: error: nid001013: tasks 0-1: Exited with exit code 255
+srun: Terminating StepId=10132116.8
+srun: error: nid001014: tasks 2-3: Exited with exit code 255
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+srun: error: nid001013: tasks 0-1: Exited with exit code 255
+srun: Terminating StepId=10132116.9
+srun: error: nid001014: tasks 2-3: Exited with exit code 255
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+srun: error: nid001013: tasks 0-1: Exited with exit code 255
+srun: Terminating StepId=10132116.10
+srun: error: nid001014: tasks 2-3: Exited with exit code 255
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+srun: error: nid001014: tasks 2-3: Exited with exit code 255
+srun: Terminating StepId=10132116.11
+srun: error: nid001013: tasks 0-1: Exited with exit code 255
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+srun: error: nid001013: tasks 0-3: Exited with exit code 255
+srun: Terminating StepId=10132116.12
+srun: error: nid001014: tasks 4-7: Exited with exit code 255
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+srun: error: nid001013: tasks 0-3: Exited with exit code 255
+srun: Terminating StepId=10132116.13
+srun: error: nid001014: tasks 4-7: Exited with exit code 255
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+srun: error: nid001013: tasks 0-3: Exited with exit code 255
+srun: Terminating StepId=10132116.14
+srun: error: nid001014: tasks 4-7: Exited with exit code 255
+ld.lld: error: undefined symbol: main
+>>> referenced by start.S:104 (../sysdeps/x86_64/start.S:104)
+>>>               /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o:(_start)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+Workload failed: No such file or directory
+srun: error: nid001013: tasks 0-3: Exited with exit code 255
+srun: Terminating StepId=10132116.15
+srun: error: nid001014: tasks 4-7: Exited with exit code 255
