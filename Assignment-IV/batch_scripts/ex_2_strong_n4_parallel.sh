@@ -1,13 +1,13 @@
 #!/bin/bash -l
 
-#SBATCH -J A4-ex2-N4-ss
-#SBATCH -t 0:15:00
+#SBATCH -J A4-ex2-N4-ss4
+#SBATCH -t 0:30:00
 #SBATCH -A edu25.dd2356
 #SBATCH -p shared
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=1
-#SBATCH -e ex2_p_N4.stderr
+#SBATCH -e ex2_p_N4_ss4.stderr
 process_count=(1 2 4 8)
 matrix_sizes=(1000 10000 100000 1000000)
 
