@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH -J A4-ex3-mpi_1
+#SBATCH -J A4-ex3_mpi_ex1
 #SBATCH -t 0:15:00
 #SBATCH -A edu25.dd2356
 #SBATCH -p shared
@@ -9,6 +9,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex3_mpi_ex1.stderr
 
+export SCOREP_ENABLE_PROFILING=true
 scorep cc -lm -O3 -march=native ../ex3/ex_1_mpi.c -o ../bin/ex3_sp_ex1.out
 
 # Run and redirect output
