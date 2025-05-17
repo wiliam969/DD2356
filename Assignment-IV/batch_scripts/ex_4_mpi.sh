@@ -10,7 +10,7 @@
 #SBATCH --mem=16G
 
 process_count=(1 2 4 8)
-matrix_sizes=(1000 10000 100000 1000000)
+matrix_sizes=(1000 10000 100000)
 
 . ./perf_env
 
