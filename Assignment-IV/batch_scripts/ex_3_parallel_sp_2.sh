@@ -13,7 +13,7 @@ process_count=(8)
 
 module load PDC/23.12
 module load score-p/8.4-cpeGNU
-scorep mpicc -lm -O3 -march=native -DN=1000000 ../ex2/ex_2_parallel_sum.c -o ../bin/ex_2_parallel_sum.out
+scorep mpicc -lm -O3 -march=native -DN=1000000 ../ex2/ex2_parallel_sum.c -o ../bin/ex2_parallel_sum.out
 
 # Run and redirect output
-srun -n ${process_count} ../bin/ex_2_parallel_sum.out 
+srun -n ${process_count} ../bin/ex2_parallel_sum.out 
