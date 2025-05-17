@@ -23,7 +23,7 @@ int main() {
     initialize(matrix, vector);
     
     // Perform matrix-vector multiplication using BLAS
-    cblas_dgemv(CblasRowMajor, CblasNoTrans, MATRIX_SIZE, MATRIX_SIZE, 1.0, matrix, MATRIX_SIZEN, vector, 1, 0.0, result, 1);
+    cblas_dgemv(CblasRowMajor, CblasNoTrans, MATRIX_SIZE, MATRIX_SIZE, 1.0, matrix, MATRIX_SIZE, vector, 1, 0.0, result, 1);
     
     // Write output to file
     FILE *f = fopen("blas_serial_output.txt", "w");
