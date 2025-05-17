@@ -11,7 +11,7 @@
 #SBATCH --mem=16G
 
 process_count=(1 2 4 8)
-matrix_sizes=(1000 10000 100000 1000000)
+matrix_sizes=(1000 10000 100000)
 
 . ./perf_env
 
@@ -19,6 +19,6 @@ matrix_sizes=(1000 10000 100000 1000000)
 for proc in "${process_count[@]}"; do
     for size in "${matrix_sizes[@]}"; do
         cc -lm -O3 -march=native -DN="$((proc * size))" ../ex2/ex2_parallel_sum.c -o ../bin/ex2_parallel_weak_n1_sum.out
-        srun --cpus-per-task=1 --ntasks-per-node=${proc} perf stat -e ${events} -o ex2_parallel_weak_sum_n1_${proc}_${size}.data ../bin/ex2_parallel_weak_n1_sum.out > ../batch_output/ex2_parallel_weak_sum_n1_${proc}_${size}_output.stdout
+        srun -n ${proc} perf stat -e ${events} -o ex2_parallel_weak_sum_n1_${proc}_${size}.data ../bin/ex2_parallel_weak_n1_sum.out > ../batch_output/ex2_parallel_weak_sum_n1_${proc}_${size}_output.stdout
     done
 done
