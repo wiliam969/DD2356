@@ -7,6 +7,10 @@
 #define MATRIX_SIZE 1000  // Matrix size
 #endif
 
+#ifndef IO_ON_OFF
+#define IO_ON_OFF 1 // IO flag
+#endif
+
 void initialize(double *matrix, double *vector) {
     for (int i = 0; i < MATRIX_SIZE * MATRIX_SIZE; i++) {
         matrix[i] = (double)(i % 100) / 10.0;
@@ -77,11 +81,13 @@ int main(int argc, char **argv) {
     );
 
     // Write output to file
-    FILE *f = fopen("blas_mpi_output.txt", "w");
-    for (int i = 0; i < MATRIX_SIZE; i++) {
-        fprintf(f, "%f\n", result[i]);
+    if (rank == 0) {    
+        FILE *f = fopen("blas_mpi_output.txt", "w");
+        for (int i = 0; i < MATRIX_SIZE; i++) {
+            fprintf(f, "%f\n", result[i]);
+        }
+        fclose(f);
     }
-    fclose(f);
     
     free(matrix);
     free(vector);
