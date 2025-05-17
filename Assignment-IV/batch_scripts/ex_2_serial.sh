@@ -11,6 +11,8 @@
 #SBATCH --mem=16G
 matrix_sizes=(1000 10000 100000 1000000)
 
+. ./perf_env
+
 for size in "${matrix_sizes[@]}"; do
     gcc -O3 -fopenmp -DN=${size} ../ex2/ex2_serial_sum.c -o ../bin/ex2_serial_sum.out
     # Run and redirect output
