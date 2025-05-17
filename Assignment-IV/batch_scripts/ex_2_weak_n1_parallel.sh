@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 #SBATCH -J A4-ex2-N1-ws1
-#SBATCH -t 0:45:00
+#SBATCH -t 1:45:00
 #SBATCH -A edu25.dd2356
 #SBATCH -p shared
 #SBATCH --nodes=1
