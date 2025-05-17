@@ -1,2 +1,34 @@
-# started on Fri May 16 07:45:41 2025
+# started on Sat May 17 10:51:04 2025
+
+
+ Performance counter stats for '../bin/ex2_parallel_strong_n1_sum.out':
+
+     4,151,464,533      all_dc_accesses:u                #    4.375 G/sec                    (35.36%)
+            948.96 msec task-clock:u                     #    0.496 CPUs utilized          
+                 0      context-switches:u               #    0.000 /sec                   
+                 0      all_tlbs_flushed:u               #    0.000 /sec                     (35.62%)
+           362,131      l1_dtlb_misses:u                 #  381.607 K/sec                    (35.55%)
+        11,205,629      l2_cache_accesses_from_dc_misses:u #   11.808 M/sec                    (35.47%)
+           210,647      l2_cache_accesses_from_ic_misses:u #  221.976 K/sec                    (35.46%)
+        13,077,929      l2_cache_hits_from_dc_misses:u   #   13.781 M/sec                    (35.46%)
+            85,223      l2_cache_hits_from_ic_misses:u   #   89.806 K/sec                    (35.56%)
+         2,757,106      l2_cache_hits_from_l2_hwpf:u     #    2.905 M/sec                    (35.24%)
+           793,221      l2_cache_misses_from_dc_misses:u #  835.881 K/sec                    (35.32%)
+            36,405      l2_cache_misses_from_ic_miss:u   #   38.363 K/sec                    (35.16%)
+            16,139      l2_dtlb_misses:u                 #   17.007 K/sec                    (34.97%)
+             5,341      l2_itlb_misses:u                 #    5.628 K/sec                    (34.97%)
+               439      sse_avx_stalls:u                 #  462.610 /sec                     (35.02%)
+     7,972,391,079      uops_dispatched:u                #    8.401 G/sec                    (35.09%)
+     8,695,364,671      uops_retired:u                   #    9.163 G/sec                    (35.02%)
+   <not supported>      l3_accesses:u                                               
+   <not supported>      l3_misses:u                                                 
+     1,913,407,054 ns   duration_time:u                  #    2.016 G/sec                  
+     2,852,568,551      cpu-cycles:u                     #    3.006 GHz                      (35.26%)
+     9,765,710,051      instructions:u                   #    3.42  insn per cycle           (35.45%)
+
+       1.913407054 seconds time elapsed
+
+       0.857108000 seconds user
+       0.096124000 seconds sys
+
 
