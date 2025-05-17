@@ -5,7 +5,7 @@
 #SBATCH -A edu25.dd2356
 #SBATCH -p shared
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex3_mpi2t.stderr
 

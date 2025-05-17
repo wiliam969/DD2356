@@ -8,10 +8,12 @@
 #SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex3_mpi_ex1.stderr
+process_count =(8)
 
 module load PDC/23.12
 module load score-p/8.4-cpeGNU
-scorep mpicc cc -lm -O3 -march=native ../ex1/ex_1_mpi.c -o ../bin/ex3_sp_ex1.out
 
 # Run and redirect output
-srun -n 8 ../bin/ex3_sp_ex1.out > "../batch_output/ex3_sp_ex1.stdout"
+scorep mpicc -lm -O3 -march=native -DN=10000 -DSTEPS=500 -DIO_ON_OFF=0 ../ex_1/ex_1_mpi.c -o ../bin/ex3_sp_ex1.out
+
+srun -n ${process_count} ../bin/ex3_sp_ex1.out > "../batch_output/ex3_sp_ex1.cubex"
