@@ -7,6 +7,8 @@
 #SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=1
 #SBATCH -e A4-ex4-n1.stderr
+#SBATCH --mem=16G
+
 process_count=(1 2 4 8)
 matrix_sizes=(1000 10000 100000 1000000)
 
