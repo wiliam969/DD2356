@@ -14,7 +14,7 @@ module load PDC/23.12
 module load score-p/8.4-cpeGNU
 export SCOREP_ENABLE_PROFILING=false
 export SCOREP_ENABLE_TRACING=true
-scorep mpicc -lm -O3 -march=native ../ex2/ex_2_parallel_sum.c -o ../bin/ex3_sp_ex2.out
+scorep cc -lm -O3 -march=native ../ex2/ex_2_parallel_sum.c -o ../bin/ex3_sp_ex2.out
 
 # Run and redirect output
 srun -n 8 ../bin/ex3_sp_ex2.out > "../batch_output/ex3_sp_ex2.stdout"
