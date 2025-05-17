@@ -8,7 +8,7 @@
 #SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex3_mpi_ex1.stderr
-process_count =(8)
+process_count=(8)
 
 module load PDC/23.12
 module load score-p/8.4-cpeGNU
