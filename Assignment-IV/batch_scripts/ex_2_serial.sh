@@ -14,5 +14,5 @@ matrix_sizes=(1000 10000 100000 1000000)
 for size in "${matrix_sizes[@]}"; do
     gcc -O3 -fopenmp -DN=${size} ../ex2/ex2_serial_sum.c -o ../bin/ex2_serial_sum.out
     # Run and redirect output
-    srun -n 1 perf stat -e ${events} -o ex2_serial_${size}.data ../bin/ex2_serial_sum.out >> ../batch_output/ex_2_serial_output.stdout
+    srun --cpus-per-task=1 --ntasks-per-node=1 perf stat -e ${events} -o ex2_serial_${size}.data ../bin/ex2_serial_sum.out >> ../batch_output/ex_2_serial_output.stdout
 done
