@@ -4,7 +4,7 @@
 #include <mpi.h>
 
 #ifndef N
-#define N 1000 // Grid size
+#define N 1000000 // Grid size
 #endif
 
 #ifndef STEPS
