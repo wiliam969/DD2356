@@ -1,0 +1,38 @@
+# started on Sat May 17 21:57:07 2025
+
+
+ Performance counter stats for '../bin/ex2_serial_sum.out':
+
+         1,523,633      all_dc_accesses:u                #  220.821 M/sec                    (37.39%)
+              6.90 msec task-clock:u                     #    0.611 CPUs utilized          
+                 0      context-switches:u               #    0.000 /sec                   
+                 0      all_tlbs_flushed:u               #    0.000 /sec                   
+             3,032      l1_dtlb_misses:u                 #  439.429 K/sec                  
+           252,919      l2_cache_accesses_from_dc_misses:u #   36.656 M/sec                  
+            15,201      l2_cache_accesses_from_ic_misses:u #    2.203 M/sec                  
+           245,818      l2_cache_hits_from_dc_misses:u   #   35.626 M/sec                  
+             1,507      l2_cache_hits_from_ic_misses:u   #  218.410 K/sec                    (62.61%)
+     <not counted>      l2_cache_hits_from_l2_hwpf:u                                     (0.00%)
+     <not counted>      l2_cache_misses_from_dc_misses:u                                     (0.00%)
+     <not counted>      l2_cache_misses_from_ic_miss:u                                     (0.00%)
+     <not counted>      l2_dtlb_misses:u                                              (0.00%)
+     <not counted>      l2_itlb_misses:u                                              (0.00%)
+     <not counted>      sse_avx_stalls:u                                              (0.00%)
+     <not counted>      uops_dispatched:u                                             (0.00%)
+     <not counted>      uops_retired:u                                                (0.00%)
+   <not supported>      l3_accesses:u                                               
+   <not supported>      l3_misses:u                                                 
+        11,298,441 ns   duration_time:u                  #    1.637 G/sec                  
+     <not counted>      cpu-cycles:u                                                  (0.00%)
+     <not counted>      instructions:u                                                (0.00%)
+
+       0.011298441 seconds time elapsed
+
+       0.004240000 seconds user
+       0.004240000 seconds sys
+
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog

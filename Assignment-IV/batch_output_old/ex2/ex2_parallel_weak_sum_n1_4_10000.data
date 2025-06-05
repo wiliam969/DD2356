@@ -1,0 +1,32 @@
+# started on Fri May 16 03:23:57 2025
+
+
+ Performance counter stats for '../bin/ex2_parallel_sum.out':
+
+       637,549,938      all_dc_accesses:u                                                    (28.03%)
+                 0      all_tlbs_flushed:u                                                   (30.17%)
+           377,881      l1_dtlb_misses:u                                                     (32.68%)
+           167,279      l2_cache_accesses_from_dc_misses:u                                     (34.48%)
+           167,500      l2_cache_accesses_from_ic_misses:u                                     (36.62%)
+           128,214      l2_cache_hits_from_dc_misses:u                                       (38.76%)
+             2,400      l2_cache_hits_from_ic_misses:u                                       (38.24%)
+            96,307      l2_cache_hits_from_l2_hwpf:u                                         (38.23%)
+           113,266      l2_cache_misses_from_dc_misses:u                                     (38.23%)
+            18,043      l2_cache_misses_from_ic_miss:u                                       (38.58%)
+            18,424      l2_dtlb_misses:u                                                     (38.58%)
+             3,428      l2_itlb_misses:u                                                     (40.16%)
+             1,294      sse_avx_stalls:u                                                     (38.02%)
+     1,730,036,291      uops_dispatched:u                                                    (35.52%)
+     1,737,424,908      uops_retired:u                                                       (33.38%)
+   <not supported>      l3_accesses:u                                               
+   <not supported>      l3_misses:u                                                 
+       368,317,748 ns   duration_time:u                                                    
+       507,532,103      cpu-cycles:u                                                         (31.23%)
+     2,069,358,849      instructions:u                   #    4.08  insn per cycle           (29.09%)
+
+       0.368317748 seconds time elapsed
+
+       0.168136000 seconds user
+       0.019550000 seconds sys
+
+

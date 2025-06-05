@@ -1,0 +1,34 @@
+# started on Sat May 17 19:22:27 2025
+
+
+ Performance counter stats for '../bin/blas_mpi.out':
+
+     3,942,214,330      all_dc_accesses:u                #    3.956 G/sec                    (34.67%)
+            996.46 msec task-clock:u                     #    0.494 CPUs utilized          
+                 0      context-switches:u               #    0.000 /sec                   
+                 0      all_tlbs_flushed:u               #    0.000 /sec                     (34.64%)
+           630,039      l1_dtlb_misses:u                 #  632.279 K/sec                    (34.60%)
+         6,163,873      l2_cache_accesses_from_dc_misses:u #    6.186 M/sec                    (34.95%)
+           613,135      l2_cache_accesses_from_ic_misses:u #  615.315 K/sec                    (35.36%)
+           968,474      l2_cache_hits_from_dc_misses:u   #  971.917 K/sec                    (35.76%)
+           544,881      l2_cache_hits_from_ic_misses:u   #  546.818 K/sec                    (36.01%)
+         1,454,951      l2_cache_hits_from_l2_hwpf:u     #    1.460 M/sec                    (36.04%)
+         2,021,078      l2_cache_misses_from_dc_misses:u #    2.028 M/sec                    (35.86%)
+            26,914      l2_cache_misses_from_ic_miss:u   #   27.010 K/sec                    (35.59%)
+           171,811      l2_dtlb_misses:u                 #  172.422 K/sec                    (35.35%)
+             5,127      l2_itlb_misses:u                 #    5.145 K/sec                    (35.32%)
+             1,293      sse_avx_stalls:u                 #    1.298 K/sec                    (35.32%)
+     7,827,339,563      uops_dispatched:u                #    7.855 G/sec                    (35.38%)
+     8,428,697,248      uops_retired:u                   #    8.459 G/sec                    (35.20%)
+   <not supported>      l3_accesses:u                                               
+   <not supported>      l3_misses:u                                                 
+     2,016,749,025 ns   duration_time:u                  #    2.024 G/sec                  
+     2,771,394,401      cpu-cycles:u                     #    2.781 GHz                      (35.06%)
+     9,486,816,060      instructions:u                   #    3.42  insn per cycle           (34.90%)
+
+       2.016749025 seconds time elapsed
+
+       0.807845000 seconds user
+       0.192918000 seconds sys
+
+
