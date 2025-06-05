@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 #SBATCH -J A4-ex2-N2-ws2
-#SBATCH -t 1:45:00
+#SBATCH -t 0:45:00
 #SBATCH -A edu25.dd2356
 #SBATCH -p shared
 #SBATCH --nodes=2
@@ -11,7 +11,7 @@
 #SBATCH --mem=16G
 
 process_count=(1 2 4 8)
-matrix_sizes=(1000 10000 100000)
+matrix_sizes=(1000 2000 4000 8000)
 
 . ./perf_env
 

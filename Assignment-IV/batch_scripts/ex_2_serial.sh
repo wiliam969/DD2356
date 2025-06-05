@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH -e ex2_serial_sum.stderr
 #SBATCH --mem=16G
-matrix_sizes=(1000 10000 100000 1000000)
+matrix_sizes=(1000 2000 4000 6000)
 
 . ./perf_env
 
