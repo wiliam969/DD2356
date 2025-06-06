@@ -1,38 +1,34 @@
-# started on Fri Jun  6 14:35:07 2025
+# started on Fri Jun  6 15:28:11 2025
 
 
  Performance counter stats for '../bin/blas_serial.out':
 
-        10,498,014      all_dc_accesses:u                #  578.682 M/sec                    (15.48%)
-             18.14 msec task-clock:u                     #    0.879 CPUs utilized          
+     1,328,090,328      all_dc_accesses:u                #  558.806 M/sec                    (35.07%)
+          2,376.66 msec task-clock:u                     #    0.999 CPUs utilized          
                  0      context-switches:u               #    0.000 /sec                   
-                 0      all_tlbs_flushed:u               #    0.000 /sec                     (37.51%)
-            46,535      l1_dtlb_misses:u                 #    2.565 M/sec                    (59.52%)
-         1,497,782      l2_cache_accesses_from_dc_misses:u #   82.562 M/sec                    (79.03%)
-           167,379      l2_cache_accesses_from_ic_misses:u #    9.226 M/sec                    (97.58%)
-           933,052      l2_cache_hits_from_dc_misses:u   #   51.433 M/sec                  
-           153,828      l2_cache_hits_from_ic_misses:u   #    8.479 M/sec                    (84.52%)
-           214,144      l2_cache_hits_from_l2_hwpf:u     #   11.804 M/sec                    (62.49%)
-           146,143      l2_cache_misses_from_dc_misses:u #    8.056 M/sec                    (40.48%)
-            25,695      l2_cache_misses_from_ic_miss:u   #    1.416 M/sec                    (20.97%)
-                 0      l2_dtlb_misses:u                 #    0.000 /sec                     (2.42%)
-     <not counted>      l2_itlb_misses:u                                              (0.00%)
-     <not counted>      sse_avx_stalls:u                                              (0.00%)
-     <not counted>      uops_dispatched:u                                             (0.00%)
-     <not counted>      uops_retired:u                                                (0.00%)
+                 0      all_tlbs_flushed:u               #    0.000 /sec                     (35.07%)
+           410,729      l1_dtlb_misses:u                 #  172.818 K/sec                    (35.06%)
+       273,648,264      l2_cache_accesses_from_dc_misses:u #  115.140 M/sec                    (35.06%)
+           595,221      l2_cache_accesses_from_ic_misses:u #  250.444 K/sec                    (35.06%)
+       162,041,856      l2_cache_hits_from_dc_misses:u   #   68.181 M/sec                    (35.32%)
+         1,437,195      l2_cache_hits_from_ic_misses:u   #  604.712 K/sec                    (35.49%)
+         8,144,103      l2_cache_hits_from_l2_hwpf:u     #    3.427 M/sec                    (35.49%)
+        21,342,948      l2_cache_misses_from_dc_misses:u #    8.980 M/sec                    (35.49%)
+           212,737      l2_cache_misses_from_ic_miss:u   #   89.511 K/sec                    (35.48%)
+           190,479      l2_dtlb_misses:u                 #   80.146 K/sec                    (35.48%)
+                22      l2_itlb_misses:u                 #    9.257 /sec                     (35.34%)
+               149      sse_avx_stalls:u                 #   62.693 /sec                     (35.34%)
+     6,827,907,188      uops_dispatched:u                #    2.873 G/sec                    (35.34%)
+     7,112,262,542      uops_retired:u                   #    2.993 G/sec                    (35.34%)
    <not supported>      l3_accesses:u                                               
    <not supported>      l3_misses:u                                                 
-        20,649,977 ns   duration_time:u                  #    1.138 G/sec                  
-     <not counted>      cpu-cycles:u                                                  (0.00%)
-     <not counted>      instructions:u                                                (0.00%)
+     2,378,614,296 ns   duration_time:u                  #    1.001 G/sec                  
+     4,490,832,083      cpu-cycles:u                     #    1.890 GHz                      (35.34%)
+     6,812,006,151      instructions:u                   #    1.52  insn per cycle           (35.23%)
 
-       0.020649977 seconds time elapsed
+       2.378614296 seconds time elapsed
 
-       0.011162000 seconds user
-       0.007441000 seconds sys
+       1.376559000 seconds user
+       1.000406000 seconds sys
 
 
-Some events weren't counted. Try disabling the NMI watchdog:
-	echo 0 > /proc/sys/kernel/nmi_watchdog
-	perf stat ...
-	echo 1 > /proc/sys/kernel/nmi_watchdog
