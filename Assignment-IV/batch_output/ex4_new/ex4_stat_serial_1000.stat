@@ -1,20 +1,20 @@
-# started on Fri Jun  6 14:35:07 2025
+# started on Fri Jun  6 15:01:41 2025
 
 
  Performance counter stats for '../bin/blas_serial.out':
 
-         1,155,341      all_dc_accesses:u                #   85.778 M/sec                    (12.53%)
-             13.47 msec task-clock:u                     #    0.837 CPUs utilized          
+         1,010,703      all_dc_accesses:u                #   90.055 M/sec                    (7.38%)
+             11.22 msec task-clock:u                     #    0.864 CPUs utilized          
                  0      context-switches:u               #    0.000 /sec                   
-                 0      all_tlbs_flushed:u               #    0.000 /sec                     (42.17%)
-            40,161      l1_dtlb_misses:u                 #    2.982 M/sec                    (71.81%)
-           346,137      l2_cache_accesses_from_dc_misses:u #   25.699 M/sec                    (93.43%)
-           152,521      l2_cache_accesses_from_ic_misses:u #   11.324 M/sec                  
-           279,867      l2_cache_hits_from_dc_misses:u   #   20.779 M/sec                  
-           140,060      l2_cache_hits_from_ic_misses:u   #   10.399 M/sec                    (87.47%)
-            99,366      l2_cache_hits_from_l2_hwpf:u     #    7.377 M/sec                    (57.83%)
-            25,465      l2_cache_misses_from_dc_misses:u #    1.891 M/sec                    (28.19%)
-                 0      l2_cache_misses_from_ic_miss:u   #    0.000 /sec                     (6.57%)
+                 0      all_tlbs_flushed:u               #    0.000 /sec                     (42.96%)
+            32,329      l1_dtlb_misses:u                 #    2.881 M/sec                  
+           317,202      l2_cache_accesses_from_dc_misses:u #   28.263 M/sec                  
+           168,136      l2_cache_accesses_from_ic_misses:u #   14.981 M/sec                  
+           278,307      l2_cache_hits_from_dc_misses:u   #   24.798 M/sec                  
+           155,924      l2_cache_hits_from_ic_misses:u   #   13.893 M/sec                    (92.62%)
+            95,652      l2_cache_hits_from_l2_hwpf:u     #    8.523 M/sec                    (57.04%)
+     <not counted>      l2_cache_misses_from_dc_misses:u                                     (0.00%)
+     <not counted>      l2_cache_misses_from_ic_miss:u                                     (0.00%)
      <not counted>      l2_dtlb_misses:u                                              (0.00%)
      <not counted>      l2_itlb_misses:u                                              (0.00%)
      <not counted>      sse_avx_stalls:u                                              (0.00%)
@@ -22,14 +22,14 @@
      <not counted>      uops_retired:u                                                (0.00%)
    <not supported>      l3_accesses:u                                               
    <not supported>      l3_misses:u                                                 
-        16,088,758 ns   duration_time:u                  #    1.195 G/sec                  
+        12,985,288 ns   duration_time:u                  #    1.157 G/sec                  
      <not counted>      cpu-cycles:u                                                  (0.00%)
      <not counted>      instructions:u                                                (0.00%)
 
-       0.016088758 seconds time elapsed
+       0.012985288 seconds time elapsed
 
-       0.003531000 seconds user
-       0.010594000 seconds sys
+       0.003985000 seconds user
+       0.007970000 seconds sys
 
 
 Some events weren't counted. Try disabling the NMI watchdog:
