@@ -80,8 +80,12 @@ int main(int argc, char **argv) {
         MPI_COMM_WORLD
     );
 
+    free(local_result); 
+    free(local_mat); 
+    MPI_Finalize();
+
     // Write output to file
-    if (rank == 0) {    
+    if (rank == 0 && IO_ON_OFF == 1) {    
         FILE *f = fopen("blas_mpi_output.txt", "w");
         for (int i = 0; i < MATRIX_SIZE; i++) {
             fprintf(f, "%f\n", result[i]);
