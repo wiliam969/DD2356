@@ -9,7 +9,7 @@
 #SBATCH -e A4-ex4-ser.stderr
 #SBATCH --mem=16G
  
-matrix_sizes=(1000 10000 100000 1000000)
+matrix_sizes=(500 1000 2000 4000 8000 10000 20000 40000)
 
 . ./perf_env
 
