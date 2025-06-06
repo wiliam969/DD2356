@@ -10,7 +10,7 @@
 #SBATCH -e ex3_mpi_ex1.stderr
 process_count=(8)
 
-module load PDC/23.12
+module load PDCOLD/23.12
 module load score-p/8.4-cpeGNU
 
 # Run and redirect output

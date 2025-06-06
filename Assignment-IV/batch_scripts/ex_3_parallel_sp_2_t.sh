@@ -10,7 +10,7 @@
 #SBATCH -e ex3_mpi2t.stderr
 
 
-module load PDC/23.12
+module load PDCOLD/23.12
 module load score-p/8.4-cpeGNU
 export SCOREP_ENABLE_PROFILING=false
 export SCOREP_ENABLE_TRACING=true
