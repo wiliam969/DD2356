@@ -1,0 +1,21 @@
+# started on Sat Jun  7 17:05:30 2025
+
+
+ Performance counter stats for '../bin/ex_1_mpi_N2.out':
+
+       754,963,425      L1-dcache-load-misses:u          #   23.07% of all L1-dcache accesses  (85.59%)
+   <not supported> Joules power/energy-pkg/u                                          
+     3,272,743,710      L1-dcache-loads:u                                                    (85.59%)
+       647,470,923      L1-dcache-prefetches:u                                               (85.79%)
+           275,194      L1-icache-load-misses:u          #    1.37% of all L1-icache accesses  (85.78%)
+        20,016,273      L1-icache-loads:u                                                    (85.78%)
+     2,055,598,566 ns   duration_time:u                                                    
+     6,744,587,034      cpu-cycles:u                                                         (85.79%)
+     3,953,446,589      instructions:u                   #    0.59  insn per cycle           (85.67%)
+
+       2.055598566 seconds time elapsed
+
+       2.042527000 seconds user
+       0.012014000 seconds sys
+
+
