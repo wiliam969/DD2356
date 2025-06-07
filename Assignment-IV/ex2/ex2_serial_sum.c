@@ -5,6 +5,10 @@
 #define N 1000 // Matrix size
 #endif
 
+#ifndef IO_ON_OFF
+#define IO_ON_OFF 1 // IO flag
+#endif
+
 void initialize_matrix(double matrix[N][N]) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -34,7 +38,11 @@ int main() {
     double matrix[N][N], row_sums[N];
     initialize_matrix(matrix);
     compute_row_sums(matrix, row_sums);
-    write_output(row_sums);
-    printf("Row sum computation complete.\n");
+
+    if (IO_ON_OFF = 1)
+    {
+        write_output(row_sums);
+        printf("Row sum computation complete.\n");
+    }
     return 0;
 }

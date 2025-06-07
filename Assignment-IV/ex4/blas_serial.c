@@ -6,6 +6,10 @@
 #define MATRIX_SIZE 1000  // Matrix size
 #endif
 
+#ifndef IO_ON_OFF
+#define IO_ON_OFF 1 // IO flag
+#endif
+
 void initialize(double *matrix, double *vector) {
     for (int i = 0; i < MATRIX_SIZE * MATRIX_SIZE; i++) {
         matrix[i] = (double)(i % 100) / 10.0;
@@ -26,11 +30,13 @@ int main() {
     cblas_dgemv(CblasRowMajor, CblasNoTrans, MATRIX_SIZE, MATRIX_SIZE, 1.0, matrix, MATRIX_SIZE, vector, 1, 0.0, result, 1);
     
     // Write output to file
-    FILE *f = fopen("blas_serial_output.txt", "w");
-    for (int i = 0; i < MATRIX_SIZE; i++) {
-        fprintf(f, "%f\n", result[i]);
+    if (IO_ON_OFF == 1)
+        FILE *f = fopen("blas_serial_output.txt", "w");
+        for (int i = 0; i < MATRIX_SIZE; i++) {
+            fprintf(f, "%f\n", result[i]);
+        }
+        fclose(f);
     }
-    fclose(f);
     
     free(matrix);
     free(vector);

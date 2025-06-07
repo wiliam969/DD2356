@@ -1,4 +1,34 @@
-# started on Fri May 16 07:45:43 2025
+# started on Fri Jun  6 23:49:10 2025
 
-# started on Fri May 16 07:45:43 2025
+
+ Performance counter stats for '../bin/ex2_parallel_strong_n1_sum.out':
+
+     2,673,181,858      all_dc_accesses:u                #    2.640 G/sec                    (34.47%)
+          1,012.66 msec task-clock:u                     #    0.500 CPUs utilized          
+                 0      context-switches:u               #    0.000 /sec                   
+                 0      all_tlbs_flushed:u               #    0.000 /sec                     (34.60%)
+         1,389,412      l1_dtlb_misses:u                 #    1.372 M/sec                    (34.59%)
+         9,965,683      l2_cache_accesses_from_dc_misses:u #    9.841 M/sec                    (34.71%)
+           607,691      l2_cache_accesses_from_ic_misses:u #  600.092 K/sec                    (35.02%)
+         1,669,530      l2_cache_hits_from_dc_misses:u   #    1.649 M/sec                    (35.78%)
+           456,112      l2_cache_hits_from_ic_misses:u   #  450.408 K/sec                    (35.93%)
+         2,041,518      l2_cache_hits_from_l2_hwpf:u     #    2.016 M/sec                    (35.66%)
+         2,690,064      l2_cache_misses_from_dc_misses:u #    2.656 M/sec                    (35.66%)
+            16,120      l2_cache_misses_from_ic_miss:u   #   15.918 K/sec                    (35.65%)
+           299,007      l2_dtlb_misses:u                 #  295.268 K/sec                    (35.50%)
+             1,512      l2_itlb_misses:u                 #    1.493 K/sec                    (35.51%)
+               967      sse_avx_stalls:u                 #  954.908 /sec                     (35.66%)
+     5,685,463,093      uops_dispatched:u                #    5.614 G/sec                    (35.66%)
+     6,154,876,657      uops_retired:u                   #    6.078 G/sec                    (35.55%)
+   <not supported>      l3_accesses:u                                               
+   <not supported>      l3_misses:u                                                 
+     2,026,498,774 ns   duration_time:u                  #    2.001 G/sec                  
+     2,152,094,103      cpu-cycles:u                     #    2.125 GHz                      (35.40%)
+     6,899,602,654      instructions:u                   #    3.21  insn per cycle           (34.64%)
+
+       2.026498774 seconds time elapsed
+
+       0.635827000 seconds user
+       0.379897000 seconds sys
+
 

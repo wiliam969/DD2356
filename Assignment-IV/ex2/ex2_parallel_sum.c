@@ -6,6 +6,10 @@
 #define N 1000  // Matrix dimension
 #endif
 
+#ifndef IO_ON_OFF
+#define IO_ON_OFF 1 // IO flag
+#endif
+
 /* Initialize the full N×N matrix on root */
 void initialize_matrix(double *matrix) {
     for (int i = 0; i < N; i++) {
@@ -112,7 +116,7 @@ int main(int argc, char **argv) {
     );
 
     /* Root writes output and prints total */
-    if (rank == 0) {
+    if (rank == 0 && IO_ON_OFF == 1) {
         write_output(row_sums);
         printf("Total sum of matrix elements = %f\n", global_total);
         free(matrix);

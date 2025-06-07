@@ -18,7 +18,7 @@ matrix_sizes=(1000 2000 4000 8000)
 # Run and redirect output
 for proc in "${process_count[@]}"; do
     for size in "${matrix_sizes[@]}"; do
-        cc -lm -O3 -march=native -DN="$((proc * size))" ../ex2/ex2_parallel_sum.c -o ../bin/ex2_parallel_weak_n1_sum.out
+        cc -lm -O3 -march=native -DN="$((proc * size))" -DIO_ON_OFF=0 ../ex2/ex2_parallel_sum.c -o ../bin/ex2_parallel_weak_n1_sum.out
         srun -n ${proc} perf stat -e ${events} -o ex2_parallel_weak_sum_n1_${proc}_${size}.data ../bin/ex2_parallel_weak_n1_sum.out > ../batch_output/ex2_parallel_weak_sum_n1_${proc}_${size}_output.stdout
     done
 done

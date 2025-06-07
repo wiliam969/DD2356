@@ -1,0 +1,38 @@
+# started on Fri Jun  6 14:47:56 2025
+
+
+ Performance counter stats for '../bin/blas_mpi.out':
+
+         2,534,002      all_dc_accesses:u                #  142.347 M/sec                    (2.08%)
+             17.80 msec task-clock:u                     #    0.930 CPUs utilized          
+                 0      context-switches:u               #    0.000 /sec                   
+                 0      all_tlbs_flushed:u               #    0.000 /sec                     (24.54%)
+           816,121      l1_dtlb_misses:u                 #   45.845 M/sec                    (46.99%)
+           432,036      l2_cache_accesses_from_dc_misses:u #   24.269 M/sec                    (69.45%)
+           226,381      l2_cache_accesses_from_ic_misses:u #   12.717 M/sec                    (91.32%)
+           369,629      l2_cache_hits_from_dc_misses:u   #   20.764 M/sec                  
+           169,983      l2_cache_hits_from_ic_misses:u   #    9.549 M/sec                    (97.92%)
+            97,285      l2_cache_hits_from_l2_hwpf:u     #    5.465 M/sec                    (75.46%)
+            89,970      l2_cache_misses_from_dc_misses:u #    5.054 M/sec                    (53.01%)
+            39,752      l2_cache_misses_from_ic_miss:u   #    2.233 M/sec                    (30.55%)
+                 0      l2_dtlb_misses:u                 #    0.000 /sec                     (8.68%)
+     <not counted>      l2_itlb_misses:u                                              (0.00%)
+     <not counted>      sse_avx_stalls:u                                              (0.00%)
+     <not counted>      uops_dispatched:u                                             (0.00%)
+     <not counted>      uops_retired:u                                                (0.00%)
+   <not supported>      l3_accesses:u                                               
+   <not supported>      l3_misses:u                                                 
+        19,134,239 ns   duration_time:u                  #    1.075 G/sec                  
+     <not counted>      cpu-cycles:u                                                  (0.00%)
+     <not counted>      instructions:u                                                (0.00%)
+
+       0.019134239 seconds time elapsed
+
+       0.009272000 seconds user
+       0.009272000 seconds sys
+
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog
