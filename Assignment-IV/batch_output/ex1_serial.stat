@@ -1,0 +1,21 @@
+# started on Mon Jun  9 10:30:15 2025
+
+
+ Performance counter stats for '../bin/ex1_serial.out':
+
+       753,559,916      L1-dcache-load-misses:u          #   28.56% of all L1-dcache accesses  (85.73%)
+   <not supported> Joules power/energy-pkg/u                                          
+     2,638,820,504      L1-dcache-loads:u                                                    (85.74%)
+       422,564,360      L1-dcache-prefetches:u                                               (85.74%)
+           285,793      L1-icache-load-misses:u          #    1.25% of all L1-icache accesses  (85.74%)
+        22,899,898      L1-icache-loads:u                                                    (85.74%)
+     2,638,777,504 ns   duration_time:u                                                    
+     8,727,147,064      cpu-cycles:u                                                         (85.74%)
+     3,753,446,219      instructions:u                   #    0.43  insn per cycle           (85.58%)
+
+       2.638777504 seconds time elapsed
+
+       2.624552000 seconds user
+       0.012002000 seconds sys
+
+
