@@ -41,7 +41,6 @@ void compute_step() {
 
 void write_output(int step) {
     if (IO_ON_OFF == 0) return; // IO is off
-
     char filename[50];
     sprintf(filename, "wave_output_%d.txt", step);
     FILE *f = fopen(filename, "w");
