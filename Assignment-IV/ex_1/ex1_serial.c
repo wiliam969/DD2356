@@ -3,11 +3,21 @@
 #include <math.h>
 #include <mpi.h>
 
+#ifndef N
 #define N 1000 // Grid size
+#endif
+#ifndef STEPS
 #define STEPS 100 // Time steps
+#endif
 #define C 1.0   // Wave speed
 #define DT 0.01 // Time step
 #define DX 1.0  // Grid spacing
+
+#ifndef IO_ON_OFF
+#define IO_ON_OFF 1 // IO flag
+#endif
+
+
 
 double u[N], u_prev[N];
 
@@ -30,6 +40,8 @@ void compute_step() {
 }
 
 void write_output(int step) {
+    if (IO_ON_OFF == 0) return; // IO is off
+
     char filename[50];
     sprintf(filename, "wave_output_%d.txt", step);
     FILE *f = fopen(filename, "w");
