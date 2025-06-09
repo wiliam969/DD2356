@@ -1,21 +1,21 @@
-# started on Fri May 16 19:15:16 2025
+# started on Sat Jun  7 17:06:16 2025
 
 
  Performance counter stats for '../bin/ex_1_mpi_N1.out':
 
-         1,144,049      L1-dcache-load-misses:u          #    0.00% of all L1-dcache accesses  (85.71%)
+       188,871,555      L1-dcache-load-misses:u          #    0.28% of all L1-dcache accesses  (85.70%)
    <not supported> Joules power/energy-pkg/u                                          
-    48,532,206,041      L1-dcache-loads:u                                                    (85.72%)
-           910,705      L1-dcache-prefetches:u                                               (85.72%)
-            48,609      L1-icache-load-misses:u          #    3.42% of all L1-icache accesses  (85.71%)
-         1,422,918      L1-icache-loads:u                                                    (85.71%)
-    16,276,374,245 ns   duration_time:u                                                    
-    27,403,213,872      cpu-cycles:u                                                         (85.71%)
-    91,425,693,004      instructions:u                   #    3.34  insn per cycle           (85.72%)
+    67,865,859,305      L1-dcache-loads:u                                                    (85.71%)
+       144,444,357      L1-dcache-prefetches:u                                               (85.72%)
+           151,865      L1-icache-load-misses:u          #    1.04% of all L1-icache accesses  (85.72%)
+        14,573,716      L1-icache-loads:u                                                    (85.73%)
+    24,932,916,752 ns   duration_time:u                                                    
+    41,385,983,718      cpu-cycles:u                                                         (85.73%)
+   128,866,123,166      instructions:u                   #    3.11  insn per cycle           (85.70%)
 
-      16.276374245 seconds time elapsed
+      24.932916752 seconds time elapsed
 
-       8.143474000 seconds user
-       0.002423000 seconds sys
+      12.455448000 seconds user
+       0.011995000 seconds sys
 
 
